@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: denx-jp/new-denx-site
+
+media_folder: "static/img"
+public_folder: "/uploads"
+
+publish_mode: editorial_workflow 
+
+collections:
+  # 作品群についての説明
+  - name: "Works"
+    label: "Works"
+    folder: "works"
+    create: true
+    delete: true
+    slug: "works/{{fields.title}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "author", name: "author", widget: "string"}
+      - {label: "Tag", name: "tags", widget: "list"}
+      - {label: "Slug", name: "slugs", widget: "string"}
+      - {label: "img", name: "thumbnail",widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Content", name: "body", widget: "markdown"}
+  
+  # 最新情報
+  - name: "News"
+    label: "News"
+    folder: "news"
+    create: true
+    delete: true
+    slug: "news/{{fields.title}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "img", name: "thumbnail",widget: "image", }
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Content", name: "body", widget: "markdown"}
+
+  - 
