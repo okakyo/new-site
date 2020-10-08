@@ -29,6 +29,7 @@ export default defineComponent({
   name: 'TheHeader',
   setup() {
     const navList = ref<NavList[]>([
+      { name: 'Home', to: '/', icon: '' },
       { name: 'About', to: '/about', icon: '' },
       { name: 'News', to: '/news', icon: '' },
       { name: 'contact', to: '/faq', icon: '' },
