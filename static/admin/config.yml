@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: github-okakyo/new-denx-site
+  name: git-gateway
   branch: master
   accept_roles:
     - admin
