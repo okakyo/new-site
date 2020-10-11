@@ -1,7 +1,7 @@
 <template>
   <illust-grid>
     <template v-slot:LeftSide>
-      <v-card transition="fade-transition" flat color="#00cba9">
+      <v-card tile size="" transition="fade-transition" flat color="#00cba9">
         <v-img class="text-center" :lazy-src="heroImg" :src="heroImg"></v-img>
       </v-card>
     </template>
