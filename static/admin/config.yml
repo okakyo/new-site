@@ -18,6 +18,7 @@ collections:
     fields:
       - { label: 'タイトル', name: 'title', widget: 'string' }
       - { label: '公開日', name: 'date', widget: 'datetime' }
-      - { label: 'サムネイル', name: 'thumbnail', widget: 'image' }
+      - { label: 'サムネイル', name: 'thumbnail', widget: 'image', default: "noimage.png" }
+      - { label: "タグ", name: "tags", widget: "list"}
       - { label: '概要', name: 'description', widget: 'string' }
       - { label: '本文', name: 'body', widget: 'markdown' }
