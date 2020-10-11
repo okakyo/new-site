@@ -14,7 +14,7 @@ collections:
     create: true
     slug: '{{slug}}'
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: 'タイトル', name: 'title', widget: 'string' }
       - { label: '公開日', name: 'date', widget: 'datetime' }
