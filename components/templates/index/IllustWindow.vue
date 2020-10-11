@@ -7,9 +7,9 @@
     </template>
     <template v-slot:RightSide>
       <v-card outlined color="transparent" class="white--text">
-        <h1 class="mb-6 text-center">Hello DENX!</h1>
+        <h1 class="mb-6 text-center">Kyohei Oka</h1>
         <v-row justify="center">
-          <h4>同志社公認プログラミングサークル</h4>
+          <h4>ブログ・ポートフォリオサイト</h4>
         </v-row>
       </v-card>
     </template>
