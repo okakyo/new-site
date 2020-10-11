@@ -1,7 +1,7 @@
 <template>
   <v-container fluid style="background-color: #00cba9" class="pa-5">
     <v-layout class="mt-5">
-      <v-row justify="center" align="center">
+      <v-row wrap justify="center" align="center">
         <v-col cols="8" md="5" class="mb-5">
           <slot name="LeftSide" />
         </v-col>
