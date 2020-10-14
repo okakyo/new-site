@@ -88,8 +88,6 @@ export default {
     'og:title': 'blog-site',
     description: 'okakyo のブログサイトを管理するためのツール',
     lang: 'ja',
-    theme_color: '#529b58',
-    background_color: '#bde0c0',
     display: 'standalone',
     scope: '/',
     start_url: '/admin',
