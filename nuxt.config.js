@@ -90,7 +90,7 @@ export default {
     lang: 'ja',
     display: 'standalone',
     scope: '/',
-    start_url: '/admin',
+    start_url: '/',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
