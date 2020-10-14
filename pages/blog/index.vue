@@ -1,6 +1,8 @@
 <template>
   <index-grid>
-    <index-card page-title="部活の紹介"> 部活の紹介 </index-card>
+    <index-card page-title="記事の一覧">
+      <tenplate> </tenplate>
+    </index-card>
   </index-grid>
 </template>
 
