@@ -82,6 +82,18 @@ export default {
       return files.map((file) => (file.path === '/index' ? '/' : file.path))
     },
   },
+  manifest: {
+    name: 'blog-site',
+    title: 'blog-site',
+    'og:title': 'blog-site',
+    description: 'okakyo のブログサイトを管理するためのツール',
+    lang: 'ja',
+    theme_color: '#529b58',
+    background_color: '#bde0c0',
+    display: 'standalone',
+    scope: '/',
+    start_url: '/admin',
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
 }
