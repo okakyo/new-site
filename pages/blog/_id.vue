@@ -1,5 +1,8 @@
 <template>
   <v-card>
+    <v-toolbar flat>
+      <v-toolbar-title></v-toolbar-title>
+    </v-toolbar>
     <nuxt-content />
   </v-card>
 </template>
@@ -9,6 +12,14 @@ import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'IntroductionPages',
   components: {},
+  props: {},
+  async asyncData({ $content, params }) {
+    const pageId = params.id
+    const articles = await $content('', pageId).fetch()
+    return {
+      articles,
+    }
+  },
 })
 </script>
 
