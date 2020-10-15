@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar dark color="primary">
+  <v-app-bar app flat dark color="primary">
     <v-app-bar-nav-icon />
     <v-spacer />
     <v-btn
@@ -12,7 +12,7 @@
       :to="nav.to"
       >{{ nav.name }}</v-btn
     >
-    <v-btn outlined class="ma-1"> 公式ブログ </v-btn>
+    <v-btn outlined class="ma-1" to="/blog"> 公式ブログ </v-btn>
   </v-app-bar>
 </template>
 
@@ -30,8 +30,7 @@ export default defineComponent({
   setup() {
     const navList = ref<NavList[]>([
       { name: 'Home', to: '/', icon: '' },
-      { name: 'About', to: '/about', icon: '' },
-      { name: 'News', to: '/news', icon: '' },
+      { name: 'AboutME', to: '/about', icon: '' },
       { name: 'contact', to: '/faq', icon: '' },
     ])
     return {
