@@ -1,23 +1,38 @@
 <template>
-  <v-card>
-    <v-toolbar flat>
-      <v-toolbar-title></v-toolbar-title>
-    </v-toolbar>
-    <nuxt-content />
-  </v-card>
+  <article-grid>
+    <template v-slot:LeftSide>
+      <v-card>
+        <v-toolbar flat>
+          <v-spacer />
+          <v-toolbar-title class="headline">{{
+            article.title
+          }}</v-toolbar-title>
+          <v-spacer />
+        </v-toolbar>
+        <v-divider />
+        <nuxt-content :document="article" />
+      </v-card>
+    </template>
+  </article-grid>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
+import ArticleGrid from '@/components/molecules/girds/ArticleGrid.vue'
+import IndexGrid from '@/components/molecules/girds/IndexGrid.vue'
+
 export default defineComponent({
   name: 'IntroductionPages',
-  components: {},
+  components: {
+    ArticleGrid,
+    IndexGrid,
+  },
   props: {},
   async asyncData({ $content, params }) {
     const pageId = params.id
-    const articles = await $content('', pageId).fetch()
+    const article = await $content('/blog', pageId).fetch()
     return {
-      articles,
+      article,
     }
   },
 })

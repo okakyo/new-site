@@ -1,7 +1,7 @@
 <template>
   <index-grid>
     <index-card page-title="記事の一覧">
-      <tenplate> </tenplate>
+      <template> </template>
     </index-card>
   </index-grid>
 </template>
@@ -17,6 +17,17 @@ export default defineComponent({
     IndexGrid,
     IndexCard,
     ArticleListsWindow,
+  },
+  async asyncData({ $content }) {
+    const articleLists = await $content('/blog')
+      .only(['title', 'description', 'isOpen'])
+      .where({ isOpen: true })
+      .limit(8)
+      .fetch()
+    console.log(articleLists)
+    return {
+      articleLists,
+    }
   },
 })
 </script>
