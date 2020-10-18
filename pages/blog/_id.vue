@@ -30,7 +30,7 @@ export default defineComponent({
   props: {},
   async asyncData({ $content, params }) {
     const pageId = params.id
-    const article = await $content('/blog', pageId).fetch()
+    const article = await $content('blog', pageId).fetch()
     return {
       article,
     }

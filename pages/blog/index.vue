@@ -22,7 +22,7 @@ export default defineComponent({
     ArticleListsWindow,
   },
   async asyncData({ $content }) {
-    const articleInfo = await $content('/blog')
+    const articleInfo = await $content('blog')
       .only(['title', 'description', 'thumbnail', 'isOpen'])
 
       .limit(8)
