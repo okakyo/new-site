@@ -13,6 +13,11 @@
         <nuxt-content :document="article" />
       </v-card>
     </template>
+    <template v-slot:RightSide>
+      <v-card>
+        <v-list> sample </v-list>
+      </v-card>
+    </template>
   </article-grid>
 </template>
 
