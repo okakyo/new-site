@@ -24,7 +24,7 @@
           }"
           transition="slide-x-transition"
         >
-          <v-card>
+          <v-card outlined>
             <v-card-title>
               <h3 class="">Hello World</h3>
             </v-card-title>

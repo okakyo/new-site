@@ -1,7 +1,6 @@
 <template>
   <div>
     <illust-window />
-    <activity-window :service-descriptions="serviceDescriptions" />
     <info-window />
   </div>
 </template>
@@ -18,13 +17,6 @@ export default defineComponent({
     InfoWindow,
     IllustWindow,
     ActivityWindow,
-  },
-  async asyncData({ $content }) {
-    const serviceDescriptions = await $content('index').sortBy('path').fetch()
-    console.log(serviceDescriptions)
-    return {
-      serviceDescriptions,
-    }
   },
 })
 </script>
