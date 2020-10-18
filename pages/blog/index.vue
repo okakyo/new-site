@@ -2,7 +2,7 @@
   <index-grid>
     <index-card page-title="記事の一覧">
       <template>
-        <article-lists-window :article-list="articleList" />
+        <article-lists-window :articles="articleInfo" />
       </template>
     </index-card>
   </index-grid>
@@ -22,13 +22,13 @@ export default defineComponent({
     ArticleListsWindow,
   },
   async asyncData({ $content }) {
-    const articleList = await $content('/blog')
-      .only(['title', 'description', 'isOpen'])
+    const articleInfo = await $content('/blog')
+      .only(['title', 'description', 'thumbnail', 'isOpen'])
 
       .limit(8)
       .fetch()
     return {
-      articleList,
+      articleInfo,
     }
   },
 })
