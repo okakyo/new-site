@@ -26,7 +26,6 @@ export default defineComponent({
     try {
       articleInfo = await $content('blog')
         .only(['title', 'description', 'thumbnail', 'isOpen'])
-
         .limit(8)
         .fetch()
     } catch (e) {
