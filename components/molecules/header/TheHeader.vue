@@ -1,17 +1,20 @@
 <template>
-  <v-app-bar app flat dark color="primary">
+  <v-app-bar wrap app flat dark color="primary">
     <v-app-bar-nav-icon />
     <v-spacer />
-    <v-btn
-      v-for="(nav, i) in navList"
-      :key="i"
-      class="mx-2"
-      small
-      text
-      link
-      :to="nav.to"
-      >{{ nav.name }}</v-btn
-    >
+    <div v-if="$vuetify.breakpoint.mdAndp">
+      <v-btn
+        v-for="(nav, i) in navList"
+        :key="i"
+        class="mx-2"
+        small
+        text
+        link
+        :to="nav.to"
+        >{{ nav.name }}</v-btn
+      >
+    </div>
+
     <v-btn outlined class="ma-1" to="/blog"> 公式ブログ </v-btn>
   </v-app-bar>
 </template>

@@ -1,12 +1,11 @@
 <template>
   <v-app app>
     <the-header />
-    <v-main app class="grey lighten-4 fill-height">
-      <nuxt />
+    <v-main class="grey lighten-4">
+      <v-slide-y-reverse-transition>
+        <nuxt />
+      </v-slide-y-reverse-transition>
     </v-main>
-    <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 

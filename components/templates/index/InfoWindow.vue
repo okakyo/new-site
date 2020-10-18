@@ -10,12 +10,13 @@
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-
+import IndexGrid from '@/components/molecules/girds/IndexGrid.vue'
 import IndexCard from '@/components/organisms/cards/IndexCard.vue'
 export default defineComponent({
   name: 'ActivityWindow',
   components: {
     IndexCard,
+    IndexGrid,
   },
   props: {
     title: {

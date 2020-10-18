@@ -1,11 +1,13 @@
 <template>
-  <index-grid>
-    <index-card page-title="記事の一覧">
-      <template>
-        <article-lists-window :articles="articleInfo" />
-      </template>
-    </index-card>
-  </index-grid>
+  <v-container fluid>
+    <index-grid>
+      <index-card page-title="記事の一覧">
+        <template>
+          <article-lists-window :articles="articleInfo" />
+        </template>
+      </index-card>
+    </index-grid>
+  </v-container>
 </template>
 
 <script lang="ts">
