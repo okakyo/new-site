@@ -22,11 +22,16 @@ export default defineComponent({
     ArticleListsWindow,
   },
   async asyncData({ $content }) {
-    const articleInfo = await $content('blog')
-      .only(['title', 'description', 'thumbnail', 'isOpen'])
+    let articleInfo
+    try {
+      articleInfo = await $content('blog')
+        .only(['title', 'description', 'thumbnail', 'isOpen', 'path'])
 
-      .limit(8)
-      .fetch()
+        .limit(8)
+        .fetch()
+    } catch (e) {
+      console.error(e)
+    }
     return {
       articleInfo,
     }

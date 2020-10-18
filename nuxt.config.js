@@ -81,6 +81,7 @@ export default {
 
       return files.map((file) => (file.path === '/index' ? '/' : file.path))
     },
+    fallback: true,
   },
   manifest: {
     name: 'blog-site',
