@@ -3,7 +3,7 @@
     <div class="mt-9">
       <v-card id="main-top" flat color="primary">
         <v-row wrap justify="center" align="center">
-          <v-col cols="10" sm="10" md="6" xl="4" class="mb-5">
+          <v-col cols="12" sm="8" md="6" class="mb-5">
             <slot name="LeftSide" />
           </v-col>
           <v-col cols="12" sm="10" md="4">

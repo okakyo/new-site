@@ -1,8 +1,8 @@
 <template>
-  <v-app-bar wrap app flat dark color="primary">
+  <v-app-bar clipped-left clipped-right app flat dark color="primary">
     <v-app-bar-nav-icon />
     <v-spacer />
-    <div v-if="$vuetify.breakpoint.mdAndp">
+    <div v-if="$vuetify.breakpoint.mdAndUp">
       <v-btn
         v-for="(nav, i) in navList"
         :key="i"

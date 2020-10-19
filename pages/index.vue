@@ -19,5 +19,6 @@ export default defineComponent({
     InfoWindow,
     IllustWindow,
   },
+  layout: 'index',
 })
 </script>

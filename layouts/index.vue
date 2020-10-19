@@ -2,11 +2,9 @@
   <v-app app>
     <the-header />
     <v-main class="grey lighten-4">
-      <v-container>
-        <v-slide-y-reverse-transition>
-          <nuxt />
-        </v-slide-y-reverse-transition>
-      </v-container>
+      <v-slide-y-reverse-transition>
+        <nuxt />
+      </v-slide-y-reverse-transition>
     </v-main>
   </v-app>
 </template>
