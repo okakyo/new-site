@@ -4,11 +4,16 @@
       <v-card>
         <v-toolbar flat>
           <v-spacer />
-          <v-toolbar-title class="headline">{{
-            article.title
-          }}</v-toolbar-title>
+          <v-toolbar-title class="headline">
+            <h1>{{ article.title }}</h1>
+          </v-toolbar-title>
           <v-spacer />
         </v-toolbar>
+        <v-layout>
+          <v-row justify="center">
+            <!-- > ここに、SNS ボタンを用意する <--->
+          </v-row>
+        </v-layout>
         <v-divider />
         <nuxt-content :document="article" />
       </v-card>
