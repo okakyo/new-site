@@ -4,8 +4,8 @@
       <v-col cols="12" md="10" lg="9">
         <slot name="LeftSide" />
       </v-col>
-      <v-navigation-drawer clipped app translate> </v-navigation-drawer>
-      <v-navigation-drawer clipped app right translate>
+
+      <v-navigation-drawer clipped app translate>
         <v-list dense flat>
           <v-list-item
             v-for="(item, i) in toc"
