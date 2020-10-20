@@ -4,7 +4,7 @@
       <v-layout>
         <v-row justify="center">
           <v-col cols="8">
-            <v-form class="my-7">
+            <v-form class="my-7" netlify>
               <v-text-field outlined name="title" type="input" label="件名" />
               <v-text-field
                 outlined
