@@ -1,11 +1,11 @@
 <template>
   <article-grid :toc="article.toc" :page-slug="article.slug">
     <template v-slot:LeftSide>
-      <v-card>
+      <v-card class="pt-3">
         <v-toolbar flat>
           <v-spacer />
           <v-toolbar-title class="headline">
-            <h1>{{ article.title }}</h1>
+            <h3>{{ article.title }}</h3>
           </v-toolbar-title>
           <v-spacer />
         </v-toolbar>
