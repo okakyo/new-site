@@ -23,7 +23,7 @@
                 type="text"
                 label="お問い合わせ内容"
               />
-              <v-btn block outlined>送信</v-btn>
+              <v-btn type="submit" block outlined>送信</v-btn>
             </v-form>
           </v-col>
         </v-row>
