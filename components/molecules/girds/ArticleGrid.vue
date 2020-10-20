@@ -4,22 +4,16 @@
       <v-col cols="12" md="10" lg="9">
         <slot name="LeftSide" />
       </v-col>
-
-      <v-navigation-drawer
-        clipped
-        app
-        right
-        translate
-        color="grey lighten-4"
-        :permanent="$vuetify.breakpoint.smAndUp"
-      >
-        <v-list dense>
+      <v-navigation-drawer clipped app translate> </v-navigation-drawer>
+      <v-navigation-drawer clipped app right translate>
+        <v-list dense flat>
           <v-list-item
             v-for="(item, i) in toc"
             :key="i"
             nuxt
+            color="info"
             link
-            :to="'/docs' + page.dir + '/' + page.slug + '#' + item.id"
+            :to="'/blog/' + pageSlug + '#' + item.id"
           >
             <v-list-item-title v-if="item.depth == 2" class="text-primary">{{
               item.text
@@ -37,5 +31,9 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'IllustGrid',
+  props: {
+    toc: Array,
+    pageSlug: String,
+  },
 })
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <article-grid>
+  <article-grid :toc="article.toc" :page-slug="article.slug">
     <template v-slot:LeftSide>
       <v-card>
         <v-toolbar flat>
@@ -11,11 +11,6 @@
         </v-toolbar>
         <v-divider />
         <nuxt-content :document="article" />
-      </v-card>
-    </template>
-    <template v-slot:RightSide>
-      <v-card>
-        <v-list> sample </v-list>
       </v-card>
     </template>
   </article-grid>

@@ -1,6 +1,6 @@
 <template>
   <index-grid>
-    <index-card page-title="お知らせ">
+    <index-card page-title="プロフィール">
       <activity-window :service-descriptions="serviceDescriptions" />
     </index-card>
   </index-grid>
