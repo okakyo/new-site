@@ -1,6 +1,6 @@
 <template>
   <v-app-bar clipped-left clipped-right app flat dark color="primary">
-    <v-app-bar-nav-icon />
+    <v-btn dark depressed text nuxt to="/">Home</v-btn>
     <v-spacer />
     <div v-if="$vuetify.breakpoint.mdAndUp">
       <v-btn
@@ -32,7 +32,6 @@ export default defineComponent({
   name: 'TheHeader',
   setup() {
     const navList = ref<NavList[]>([
-      { name: 'Home', to: '/', icon: '' },
       { name: 'AboutME', to: '/about', icon: '' },
       { name: 'contact', to: '/faq', icon: '' },
     ])

@@ -3,6 +3,9 @@
     <template v-slot:LeftSide>
       <article-window :article="article" />
     </template>
+    <template v-slot:RightSide>
+      <v-card> sample </v-card>
+    </template>
   </article-grid>
 </template>
 

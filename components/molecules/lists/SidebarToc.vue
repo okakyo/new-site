@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer clipped app translate>
-    <v-list dense flat>
+    <v-list dense flat class="my-5 mx-3">
       <v-list-item
         v-for="(item, i) in toc"
         :key="i"
