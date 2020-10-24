@@ -3,8 +3,8 @@
     <index-card page-title="お問い合わせ">
       <v-layout>
         <v-row justify="center">
-          <v-col cols="8">
-            <v-form
+          <v-col cols="8" lg="6">
+            <form
               class="my-7"
               netlify
               netlify-honeypot="bot-field"
@@ -25,7 +25,7 @@
                 label="お問い合わせ内容"
               />
               <v-btn type="submit" block outlined>送信</v-btn>
-            </v-form>
+            </form>
           </v-col>
         </v-row>
       </v-layout>

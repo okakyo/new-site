@@ -1,7 +1,6 @@
 <template>
   <div>
     <illust-window />
-
     <v-img :src="waveImg"></v-img>
   </div>
 </template>
