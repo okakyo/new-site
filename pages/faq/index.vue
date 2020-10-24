@@ -10,6 +10,7 @@
               netlify-honeypot="bot-field"
               data-netlify="true"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <v-text-field outlined name="title" type="input" label="件名" />
               <v-text-field
                 outlined

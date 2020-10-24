@@ -69,6 +69,7 @@ export default defineComponent({
         color: '#008fde',
       },
     ])
+
     return {
       shareButtons,
     }
