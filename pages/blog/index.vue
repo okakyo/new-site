@@ -1,6 +1,6 @@
 <template>
   <index-grid>
-    <index-card page-title="記事の一覧">
+    <index-card :url-lists="urlLists" page-title="記事の一覧">
       <template>
         <article-lists-window :articles="articleInfo" />
       </template>
@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
 import IndexGrid from '@/components/molecules/girds/IndexGrid.vue'
 import IndexCard from '@/components/organisms/cards/IndexCard.vue'
 import ArticleListsWindow from '@/components/templates/blog/ArticleListsWindow.vue'
@@ -20,6 +20,23 @@ export default defineComponent({
     IndexGrid,
     IndexCard,
     ArticleListsWindow,
+  },
+  setup() {
+    const urlLists = ref([
+      {
+        text: 'Top',
+        href: '/',
+        disabled: false,
+      },
+      {
+        text: 'Blog',
+        href: '/blog',
+        disabled: true,
+      },
+    ])
+    return {
+      urlLists,
+    }
   },
   async asyncData({ $content }) {
     let articleInfo

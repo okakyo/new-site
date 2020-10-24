@@ -1,6 +1,9 @@
 <template>
   <v-app-bar clipped-left clipped-right app flat dark color="primary">
-    <v-btn dark depressed text nuxt to="/">Home</v-btn>
+    <v-btn dark depressed text nuxt to="/">
+      <v-icon left>mdi-home</v-icon>
+      Top
+    </v-btn>
     <v-spacer />
     <div v-if="$vuetify.breakpoint.mdAndUp">
       <v-btn
@@ -11,11 +14,13 @@
         text
         link
         :to="nav.to"
-        >{{ nav.name }}</v-btn
+        ><v-icon left>{{ nav.icon }}</v-icon> {{ nav.name }}</v-btn
       >
     </div>
 
-    <v-btn outlined class="ma-1" to="/blog"> 公式ブログ </v-btn>
+    <v-btn outlined class="ma-1" to="/blog">
+      <v-icon left>mdi-post</v-icon>公式ブログ
+    </v-btn>
   </v-app-bar>
 </template>
 
@@ -32,8 +37,8 @@ export default defineComponent({
   name: 'TheHeader',
   setup() {
     const navList = ref<NavList[]>([
-      { name: 'AboutME', to: '/about', icon: '' },
-      { name: 'contact', to: '/faq', icon: '' },
+      { name: 'AboutME', to: '/about', icon: 'mdi-account-details' },
+      { name: 'contact', to: '/contact', icon: 'mdi-chat' },
     ])
     return {
       navList,

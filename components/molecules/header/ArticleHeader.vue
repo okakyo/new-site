@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-breadcrumbs> </v-breadcrumbs>
+    <v-breadcrumbs></v-breadcrumbs>
     <v-toolbar flat>
       <v-spacer />
       <v-toolbar-title class="headline">
