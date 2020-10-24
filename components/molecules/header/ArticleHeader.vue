@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-breadcrumbs></v-breadcrumbs>
+    <v-breadcrumbs :items="urlLists"> </v-breadcrumbs>
     <v-toolbar flat>
       <v-spacer />
       <v-toolbar-title class="headline">
@@ -48,7 +48,26 @@ export default defineComponent({
     articleTitle: String,
     articleImg: String,
   },
-  setup() {
+  setup(props: any, { root }) {
+    const currentPath = root.$route.path
+    const slug = currentPath.split('/')[2]
+    const urlLists = ref([
+      {
+        text: 'Top',
+        href: '/',
+        disabled: false,
+      },
+      {
+        text: 'Blog',
+        href: '/blog',
+        disabled: false,
+      },
+      {
+        text: slug,
+        href: currentPath,
+        disabled: true,
+      },
+    ])
     const shareButtons = ref([
       {
         name: 'twitter',
@@ -72,6 +91,7 @@ export default defineComponent({
 
     return {
       shareButtons,
+      urlLists,
     }
   },
 })
