@@ -26,6 +26,7 @@ export default defineComponent({
 
 <style>
 .nuxt-content {
+  width: inherit;
   padding: 5%;
   padding-top: 3%;
 }
@@ -78,14 +79,10 @@ export default defineComponent({
 
 .nuxt-content-highlight pre,
 .nuxt-content-highlight code {
-  width: 90%;
   color: #ccc;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: pre-wrap;
   word-wrap: break-word;
-}
-pre.line-numbers {
-  width: 100%;
 }
 </style>

@@ -42,7 +42,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/img/ogp.png',
+        content: 'https://okakyo-new-portfolio.netlify.app/img/ogp.png',
       },
       {
         hid: 'twitter:card',

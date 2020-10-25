@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <v-breadcrumbs :items="urlLists"> </v-breadcrumbs>
     <v-toolbar flat>
       <v-spacer />
@@ -37,7 +37,7 @@
         </v-btn>
       </v-row>
     </v-layout>
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts">
