@@ -2,7 +2,7 @@
   <v-app app>
     <the-header />
     <v-main app class="grey lighten-4">
-      <v-container fluid>
+      <v-container>
         <v-fade-transition>
           <nuxt />
         </v-fade-transition>

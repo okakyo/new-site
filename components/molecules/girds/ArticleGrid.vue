@@ -1,6 +1,6 @@
 <template>
   <v-layout class="mt-2">
-    <v-row wrap justify="center">
+    <v-row justify="center">
       <v-col cols="12" md="9" lg="8">
         <slot name="LeftSide" />
       </v-col>

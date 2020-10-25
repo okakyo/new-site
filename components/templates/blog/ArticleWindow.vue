@@ -75,7 +75,17 @@ export default defineComponent({
   font-size: initial;
   color: '#ccc';
 }
+
+.nuxt-content-highlight pre,
 .nuxt-content-highlight code {
+  width: 100%;
   color: #ccc;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre.line-numbers {
+  width: 100%;
 }
 </style>
