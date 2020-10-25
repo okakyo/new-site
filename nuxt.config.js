@@ -14,7 +14,30 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: "Okakyo's Portfolio & Blog Site",
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: "Okakyo's Blog",
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://okakyo-new-portfolio.netlify.app',
+      },
+      { hid: 'og:title', property: 'og:title', content: "Okakyo's Blog" },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "Okakyo's Portfolio & Blog Site",
+      },
+      { hid: 'og:image', property: 'og:image', content: '/ogp.png' },
+      { name: 'twitter:card', content: 'summary' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -74,9 +97,13 @@ export default {
       },
     },
   },
+
   generate: {
     async routes() {
       const { $content } = require('@nuxt/content')
+      // const allArticles = await $content('', { deep: true }).only(['path']).fetch();
+      // const articleLength = allArticles.length;
+
       const files = await $content('', { deep: true }).only(['path']).fetch()
       return files.map((file) => (file.path === '/index' ? '/' : file.path))
     },

@@ -3,6 +3,7 @@
     <index-card :url-lists="urlLists" page-title="記事の一覧">
       <template>
         <article-lists-window :articles="articleInfo" />
+        <v-pagination />
       </template>
     </index-card>
   </index-grid>
