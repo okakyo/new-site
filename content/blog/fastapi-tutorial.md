@@ -4,9 +4,11 @@ tags:
   - python
   - Fastapi
 slugs: fastapi-starter-1
-description: この記事では、FastAPI を実装した話について書いています。この記事では、FastAPI をDocker を利用した環境構築から、アプリを構築する方法を書いています。
-thumbnail: /uploads/accord-2119_640-min.jpg
 date: 2020-1-18T04:52:54.681Z
+thumbnail: /img/noimage.png
+isOpen: false
+description: この記事では、FastAPI を実装した話について書いています。この記事では、FastAPI をDocker
+  を利用した環境構築から、アプリを構築する方法を書いています。
 ---
 
 ## FastAPI とは
