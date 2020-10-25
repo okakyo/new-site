@@ -122,6 +122,8 @@ export default {
     fallback: true,
   },
   manifest: {
+    name: "OkaKyo's Blog",
+    description: "Okakyo's Portfolio & Blog Site",
     lang: 'ja',
     display: 'standalone',
     scope: '/',
