@@ -122,10 +122,6 @@ export default {
     fallback: true,
   },
   manifest: {
-    name: 'blog-site',
-    title: 'blog-site',
-    'og:title': 'blog-site',
-    description: 'okakyo のブログサイトを管理するためのツール',
     lang: 'ja',
     display: 'standalone',
     scope: '/',
