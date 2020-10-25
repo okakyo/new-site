@@ -78,7 +78,7 @@ export default defineComponent({
 
 .nuxt-content-highlight pre,
 .nuxt-content-highlight code {
-  width: 100%;
+  width: 90%;
   color: #ccc;
   overflow-x: auto;
   overflow-y: hidden;

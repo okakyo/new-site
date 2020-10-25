@@ -10,17 +10,9 @@
         xl="3"
       >
         <article-card
-          v-if="$vuetify.breakpoint.smAndUp"
           :card-title="article.title"
           :card-thumbnail="article.thumbnail"
           :card-path="'/blog/article' + article.path.split('/blog')[1]"
-        />
-
-        <article-list-content
-          v-else
-          :list-title="article.title"
-          :list-thumbnail="article.thumbnail"
-          :list-path="article.path"
         />
       </v-col>
     </v-row>
