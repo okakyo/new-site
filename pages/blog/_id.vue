@@ -9,17 +9,14 @@
   </article-grid>
 </template>
 
-<script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+<script>
+// import { defineComponent } from '@nuxtjs/composition-api';
 import ArticleGrid from '@/components/molecules/girds/ArticleGrid.vue'
-import IndexGrid from '@/components/molecules/girds/IndexGrid.vue'
 import ArticleWindow from '@/components/templates/blog/ArticleWindow.vue'
-
-export default defineComponent({
+export default {
   name: 'IntroductionPages',
   components: {
     ArticleGrid,
-    IndexGrid,
     ArticleWindow,
   },
   props: {},
@@ -30,7 +27,49 @@ export default defineComponent({
       article,
     }
   },
-})
+  head() {
+    return {
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description,
+        },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: "Okakyo's Blog",
+        },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content:
+            'https://okakyo-new-portfolio.netlify.app' + this.$router.path,
+        },
+        { hid: 'og:title', property: 'og:title', content: "Okakyo's Blog" },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.article.description,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://okakyo-new-portfolio.netlify.app/img/ogp.png',
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        { hid: 'twitter:site', name: 'twitter:site', content: '@31415O_Kyo' },
+      ],
+    }
+  },
+}
 </script>
 
 <style>
