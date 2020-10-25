@@ -1,14 +1,16 @@
 ---
-title: Gridsome で ブログを制作した話  
-tags: 
+title: Gridsome で ブログを制作した話
+tags:
   - プログラミング
   - JavaScript
   - Vue.js
-slugs: gridsome-blog  
-description: >-
-  こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。Netlifyを利用して、無料でサイトを公開、運用する方法を書いて行きたいと思います。 
-thumbnail: /uploads/coffee-2737047_640-min.jpg  
+slugs: gridsome-blog
 date: 2020-1-19T20:15:41.251Z
+thumbnail: /img/noimage.png
+isOpen: false
+description: "こんにちは、おかきょーです。今回は、Gridsome
+  を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。Netlifyを利用して、無料でサイトを公開、運用する方法を書いて行きたいと思い\
+  ます。 "
 ---
 
 ## Gridsome とは何か
