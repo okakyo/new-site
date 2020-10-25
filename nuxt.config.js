@@ -81,7 +81,14 @@ export default {
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/content-config)
-  content: {},
+  content: {
+    markdown: {
+      remarkPlugins: ['remark-emoji'],
+      prism: {
+        theme: 'prismjs/themes/prism-tomorrow.css',
+      },
+    },
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {

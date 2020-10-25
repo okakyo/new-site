@@ -27,7 +27,8 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@vue/composition-api": "^1.0.0-beta.15",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.5"
+    "nuxt": "^2.14.5",
+    "remark-emoji": "^2.1.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.5",
