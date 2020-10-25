@@ -1,13 +1,14 @@
 ---
 title: Web アプリ開発を効率よく学ぶには
-tags: 
-  - 初心者向け 
-  - Webアプリ開発 
-slugs: web-app-starter 
-description: >-
-  こんにちは、おかきょーです。今回は、今からWeb アプリを始めたいと考えている学生へ向けて、個人的に効率よくWeb アプリ開発を学ぶ方法について書いて行きたいと考えてこの記事を書きました。
-thumbnail: /uploads/code-1839406_640-min.jpg 
+tags:
+  - 初心者向け
+  - Webアプリ開発
+slugs: web-app-starter
 date: 2020-1-21T04:52:54.681Z
+thumbnail: /img/noimage.png
+isOpen: false
+description: こんにちは、おかきょーです。今回は、今からWeb アプリを始めたいと考えている学生へ向けて、個人的に効率よくWeb
+  アプリ開発を学ぶ方法について書いて行きたいと考えてこの記事を書きました。
 ---
 
 ## Web アプリの現状
