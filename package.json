@@ -11,7 +11,7 @@
     "lint": "npm run lint:js"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint --fix"
+    "*.{ts,js,vue}": "eslint --fix"
   },
   "husky": {
     "hooks": {
