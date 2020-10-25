@@ -36,7 +36,11 @@ export default {
         property: 'og:description',
         content: "Okakyo's Portfolio & Blog Site",
       },
-      { hid: 'og:image', property: 'og:image', content: '/ogp.png' },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://okakyo-new-portfolio.netlify.app/img/ogp.png',
+      },
       {
         hid: 'twitter:card',
         name: 'twitter:card',
