@@ -37,7 +37,12 @@ export default {
         content: "Okakyo's Portfolio & Blog Site",
       },
       { hid: 'og:image', property: 'og:image', content: '/ogp.png' },
-      { name: 'twitter:card', content: 'summary_large_image' },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@31415O_Kyo' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
