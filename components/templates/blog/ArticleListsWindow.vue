@@ -1,6 +1,6 @@
 <template>
   <v-list>
-    <v-row justify="center">
+    <v-row justify="center" class="pa-6">
       <v-col
         v-for="(article, index) in articles"
         :key="index"

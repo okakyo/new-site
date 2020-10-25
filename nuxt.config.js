@@ -117,7 +117,13 @@ export default {
       // const articleLength = allArticles.length;
 
       const files = await $content('', { deep: true }).only(['path']).fetch()
-      return files.map((file) => (file.path === '/index' ? '/' : file.path))
+      return files.map((file) =>
+        file.path === '/index'
+          ? '/'
+          : file.path.match('^/blog')
+          ? '/blog/article' + file.path.split('/blog')[1]
+          : file.path
+      )
     },
     fallback: true,
   },
