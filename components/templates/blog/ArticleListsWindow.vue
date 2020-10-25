@@ -13,7 +13,7 @@
           v-if="$vuetify.breakpoint.smAndUp"
           :card-title="article.title"
           :card-thumbnail="article.thumbnail"
-          :card-path="article.path"
+          :card-path="'/blog/article' + article.path.split('/blog')[1]"
         />
 
         <article-list-content
