@@ -10,7 +10,7 @@
       <v-col
         class="my-6"
         :order="
-          $vuetify.breakpoint.mdAndUp && index % 2 == 0 ? 'last' : 'first'
+          $vuetify.breakpoint.mdAndUp && index % 2 == 0 ? 'first' : 'last'
         "
         cols="6"
         sm="3"
