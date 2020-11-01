@@ -1,11 +1,9 @@
 <template>
-  <v-layout>
-    <v-row justify="center">
-      <v-col cols="12" sm="10" md="9" lg="8">
-        <slot />
-      </v-col>
-    </v-row>
-  </v-layout>
+  <v-row justify="center">
+    <v-col cols="12" sm="10" md="9" lg="8">
+      <slot />
+    </v-col>
+  </v-row>
 </template>
 
 <script lang="ts">
