@@ -36,13 +36,14 @@ export default defineComponent({
   color: #010101; /* 文字色 */
   background: #eaf3ff; /* 背景色 */
   border-bottom: solid 3px #516ab6; /*下線*/
+  border-top: solid 3px #516ab6; /*下線*/
 }
 .nuxt-content h3 {
   padding: 0.25em 0.5em; /* 上下 左右の余白 */
   margin-bottom: 0.75em;
   color: #494949; /* 文字色 */
-  background: transparent; /* 背景透明に */
-  border-bottom: solid 3px #516ab6; /*下線*/
+  background: #eaf3ff; /* 背景透明に */
+
   border-left: solid 5px #7db4e6; /* 左線 */
 }
 .nuxt-content p {
