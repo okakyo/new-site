@@ -321,7 +321,7 @@ async def saveAccount():
 ## GraphQL、WebSocket の実装
 
 GraphQL, Websocket を利用する際には、次のようにします。
-- ### GraphQL
+### GraphQL
 
 ```python
 import graphene
@@ -341,7 +341,7 @@ app.add_route("/", GraphQLApp(schema=graphene.Schema(query=Query)))
 
 ```
 
-- ### WebSocket(Jinja2 を組み合わせて構築してみる)
+### WebSocket(Jinja2 を組み合わせて構築してみる)
 
 
  ```python
