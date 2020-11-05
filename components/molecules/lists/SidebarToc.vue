@@ -7,7 +7,7 @@
         nuxt
         color="info"
         link
-        :to="'/blog/' + pageSlug + '#' + item.id"
+        :to="'/blog/article/' + pageSlug + '#' + item.id"
       >
         <v-list-item-title v-if="item.depth == 2" class="text-primary">{{
           item.text
