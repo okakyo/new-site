@@ -4,7 +4,11 @@
       :article-title="article.title"
       :article-img="article.thumbnail"
     />
+
     <v-divider />
+    <div class="article">
+      <p>{{ article.description }}</p>
+    </div>
     <nuxt-content :document="article" />
   </v-card>
 </template>
@@ -28,7 +32,12 @@ export default defineComponent({
 .nuxt-content {
   width: inherit;
   padding: 5%;
-  padding-top: 3%;
+  padding-top: 2.5%;
+}
+.article {
+  width: inherit;
+  padding: 5%;
+  padding-bottom: 2.5%;
 }
 .nuxt-content h2 {
   margin-bottom: 0.75em;
@@ -46,7 +55,7 @@ export default defineComponent({
 
   border-left: solid 5px #7db4e6; /* 左線 */
 }
-.nuxt-content p {
+p {
   padding: 0.75em;
   line-height: 1.8em;
   white-space: pre-wrap;
