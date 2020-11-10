@@ -8,10 +8,12 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "lint:md": "textlint --cache README.md content/**/*.md --fix",
     "lint": "npm run lint:js"
   },
   "lint-staged": {
     "*.{ts,js,vue}": "eslint --fix"
+    
   },
   "husky": {
     "hooks": {
@@ -46,6 +48,20 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.3.0",
     "prettier": "^2.1.1",
-    "textlint": "^11.7.6"
+    "textlint": "^11.7.6",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-filter-rule-whitelist": "^2.0.0",
+    "textlint-rule-ja-hiragana-fukushi": "^1.2.0",
+    "textlint-rule-ja-hiragana-hojodoushi": "^1.0.4",
+    "textlint-rule-ja-hiragana-keishikimeishi": "^1.0.2",
+    "textlint-rule-ja-no-mixed-period": "^2.1.1",
+    "textlint-rule-ja-no-space-around-parentheses": "^2.0.2",
+    "textlint-rule-ja-space-around-code": "^2.0.2",
+    "textlint-rule-max-ten": "^2.0.4",
+    "textlint-rule-no-mix-dearu-desumasu": "^4.0.1",
+    "textlint-rule-preset-ja-spacing": "^2.0.2",
+    "textlint-rule-preset-ja-technical-writing": "^4.0.1",
+    "textlint-rule-preset-jtf-style": "^2.3.6",
+    "textlint-rule-prh": "^5.3.0"
   }
 }

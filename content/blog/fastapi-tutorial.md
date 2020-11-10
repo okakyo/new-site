@@ -10,22 +10,22 @@ date: 2020-1-18T04:52:54.681Z
 ---
 
 ## FastAPI とは
-FastAPI は、Django やFlask といったPython のWebフレームワークの一つです。
+FastAPI は、Django や Flask といった Python の Web フレームワークの1つです。
 
 このフレームワークには、次のような特徴があります。
-- OpenAPI に基づいて、自動的にJSON Schema モデルを生成してくれます
+- OpenAPI に基づいて、自動的に JSON Schema モデルを生成してくれます
 
-- Python のASGI フレームワークである[Uvicorn](https://www.uvicorn.org/)により、
-  Node.jsやGo言語並のパフォーマンスが利用できます
+- Python の ASGI フレームワークである[Uvicorn](https://www.uvicorn.org/)により、
+  Node.js や Go 言語並のパフォーマンスが利用できます
 
-- [Pydantic](https://pydantic-docs.helpmanual.io/) を利用して、モデルの型やバリデーションを定義することができます
+- [Pydantic](https://pydantic-docs.helpmanual.io/) を利用して、モデルの型やバリデーションを定義できます
  - API を定義すると、Swagger UI,Redoc によるドキュメントが自動生成されます
   
-- GraphQLやWebSocketも対応しています
+- GraphQL や WebSocket も対応しています
 
 ## 環境構築
 
-このFastAPI は、**Python のバージョンが3.6 以上**であるという条件があります。
+この FastAPI は、**Python のバージョンが 3.6 以上**であるという条件があります。
 今回、Docker を利用しての環境構築を行っていきたいと思います。
 
 まず、`requirement.txt` を書いていきます。
@@ -56,7 +56,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
 この時、`--host 0:0:0:0` を設定しなければ、コンテナが起動できても、ローカルホストへアクセスできません。
-Flask や Rails などのフレームワークでDocker で起動したにもかかわらずlocalhost へアクセスできない場合は、
+Flask や Rails などのフレームワークで Docker で起動したにもかかわらず localhost へアクセスできない場合は、
 **起動ホストを'0.0.0.0'** と設定して起動してみてください。
 
 次に、docker-compose.yml を利用して構築していきます。
@@ -117,19 +117,19 @@ $ docker-compose build
 $ docker-compose up 
 ```
 
-起動したら、cURL を利用してhttp://localhost:8000 へアクセスすると,
+起動したら、cURL を利用してhttp://localhost:8000 へアクセスすると、
 
 ```bash 
 $curl localhost:8000
 {"message":"Hello World"}
 ```
 
-とJSON 形式のデータが返ってきます.
+と JSON 形式のデータが返ってきます。
 
 このとき、生成されたドキュメントを確認するにはこちらです。[https://localhost:8000/docs](https://localhost:8000/docs)
 
 ##  パス、クエリのパラメーターの取得
-次に, Path のパラメーターやクエリの値を取得するには、次のように取得します.
+次に、 Path のパラメーターやクエリの値を取得するには、次のように取得します。
 
 ```python
 
@@ -152,7 +152,7 @@ async def read_items(q: List[str] = Query(None)):
     return query_items
     
 ```
-curl を利用して、返ってくるJSON データを確認すると、次の通りになります。
+curl を利用して、返ってくる JSON データを確認すると、次の通りになります。
 
 ```bash
 $curl localhost:8000/2
@@ -192,7 +192,7 @@ $curl localhost:8000/hello
 
 ## Request, Response の取得
 
-Request のBody について、**pydantic** を利用して、型安全に取り出すことができます。
+Request の Body について、**pydantic** を利用して、型安全に取り出すことができます。
 
 ```python
 from fastapi import FastAPI
@@ -220,16 +220,16 @@ async def create_user(*, user: UserIn):     # Request の型を定義
     return user
 ```
 
-この時、Resonseの型を定義する際は、`@app.post('/',resonse_model=(モデルの型))` というように
+この時、Resonse の型を定義する際は、`@app.post('/',resonse_model=(モデルの型))` というように
 デコレーターの引数である**response_model**に型を定義します。
 
 
 ## HTML テンプレート (Jinja2) を利用する
 
-Flask で標準で用いられていたJinja　を利用して、HTML ファイルを返すこともできます。
+Flask で標準で用いられていた Jinja　を利用して、HTML ファイルを返すこともできます。
 しかし、それらを利用するためには、`jinja2`を事前にインストールする必要があります。
 
-また、CSS やJS といった静的ファイルを利用する際には、`aiofiles` をインストールします。
+また、CSS や JS といった静的ファイルを利用する際には、`aiofiles` をインストールします。
 
 ```python
 from fastapi import FastAPI
@@ -425,16 +425,16 @@ async def websocket_endpoint(
 ```
 
 ## 最後に
-これまで、PythonでWebアプリを作成するはあまり好まれるものではありませんでした。
-これまでのFlaskやDjango といったものは、Node.js やGo 言語に比べ、速度が遅いという問題がありした。
+これまで、Python で Web アプリを作成するはあまり好まれるものではありませんでした。
+これまでの Flask や Django といったものは、Node.js や Go 言語に比べ、速度が遅いという問題がありした。
 マイクロサービスアーキテクチャが普及していく中で、速度かつ軽量なフレームワークが好まれるために、
 処理速度の遅さは致命的な問題でした。
 
-しかしながら、これらの条件を満たしたこのFastAPIを利用すれば、
+しかしながら、これらの条件を満たしたこの FastAPI を利用すれば、
 より高速なレスポンスによるパフォーマンスの向上が期待できます。
 
 さらに、Pydantic による型安全が行えるため、開発する際の手助けにもなるので、
-今後Flaskの代替フレームワークとして、ますます普及が進むと思われます。
+今後 Flask の代替フレームワークとして、ますます普及が進むと思われます。
 
 
 

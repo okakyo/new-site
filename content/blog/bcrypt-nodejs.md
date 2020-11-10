@@ -53,7 +53,7 @@ WORKDIR /api
 RUN npm ci
 ```
 
-最後に、`docker-compose.yaml` を次のように書いて行きます。
+最後に、`docker-compose.yaml` を次のように書いていきます。
 
 - docker-compose.yaml
 ```yaml
@@ -70,7 +70,7 @@ services:
       - ./api:/api
 ```
 **"dockerhub-account"** には、 DockerHub のアカウント名を入力してください。 
-以上のように設定したのち, 親ディレクトリにて、
+以上のように設定したのち、 親ディレクトリにて、
 
 ```
 docker-compose build
@@ -99,7 +99,7 @@ Error: Error loading shared library /api/node_modules/bcrypt/lib/binding/bcrypt_
 
 ## 解決方法
 
-このようなエラー要因は、コンテナ内ののBcrypt ライブラリと ローカル環境内のBcrypt ライブラリと同期した際に発生することがわかりました。この解決方法が、**これらを同期させない** ことでした。
+このようなエラー要因は、コンテナ内のの Bcrypt ライブラリとローカル環境内の Bcrypt ライブラリと同期した際に発生することがわかりました。この解決方法が、**これらを同期させない** ことでした。
 
 node_modules に新たにライブラリを追加するたびにコンテナを再ビルドする必要がありますが、コードが修正されるたびにコンテナのコードも修正されるので、開発時に大きく役立てられます。
 
@@ -121,4 +121,4 @@ services:
       - ./api/src:/api/src 
 ```
 
-このようにすれば、Docker 上で、Node.jsライブラリが構築され, Bcrypt 使用時にエラーを出すことなく開発することができます。
+このようにすれば、Docker 上で、Node.js ライブラリが構築され、 Bcrypt 使用時にエラーを出すことなく開発できます。
