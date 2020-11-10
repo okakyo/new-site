@@ -9,12 +9,47 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    htmlAttrs: {
+      prefix: 'og: http://ogp.me/ns#',
+    },
     titleTemplate: '%s',
-    title: 'DENX Official Page',
+    title: 'Blog Page',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: "Okakyo's Portfolio & Blog Site",
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: "Okakyo's Blog",
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://okakyo-new-portfolio.netlify.app',
+      },
+      { hid: 'og:title', property: 'og:title', content: "Okakyo's Blog" },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "Okakyo's Portfolio & Blog Site",
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://okakyo-new-portfolio.netlify.app/img/ogp.png',
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@31415O_Kyo' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -46,7 +81,14 @@ export default {
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/content-config)
-  content: {},
+  content: {
+    markdown: {
+      remarkPlugins: ['remark-emoji'],
+      prism: {
+        theme: 'prismjs/themes/prism-tomorrow.css',
+      },
+    },
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
@@ -74,19 +116,27 @@ export default {
       },
     },
   },
+
   generate: {
     async routes() {
       const { $content } = require('@nuxt/content')
-      const files = await $content().only(['path']).fetch()
+      // const allArticles = await $content('', { deep: true }).only(['path']).fetch();
+      // const articleLength = allArticles.length;
 
-      return files.map((file) => (file.path === '/index' ? '/' : file.path))
+      const files = await $content('', { deep: true }).only(['path']).fetch()
+      return files.map((file) =>
+        file.path === '/index'
+          ? '/'
+          : file.path.match('^/blog')
+          ? '/blog/article' + file.path.split('/blog')[1]
+          : file.path
+      )
     },
+    fallback: true,
   },
   manifest: {
-    name: 'blog-site',
-    title: 'blog-site',
-    'og:title': 'blog-site',
-    description: 'okakyo のブログサイトを管理するためのツール',
+    name: "OkaKyo's Blog",
+    description: "Okakyo's Portfolio & Blog Site",
     lang: 'ja',
     display: 'standalone',
     scope: '/',

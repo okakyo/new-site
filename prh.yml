@@ -1,0 +1,9 @@
+version: 1
+rules:
+  - expected: フォルダー
+    pattern:
+      - フォルダ
+
+  - expected: Cloud Functions
+    pattern:
+      - cloud functions

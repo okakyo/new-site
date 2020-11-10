@@ -5,12 +5,12 @@
       :key="index"
       wrap
       justify="center"
-      class="my-5"
+      class="my-5 text-center"
     >
       <v-col
         class="my-6"
         :order="
-          $vuetify.breakpoint.mdAndUp && index % 2 == 0 ? 'last' : 'first'
+          $vuetify.breakpoint.mdAndUp && index % 2 == 0 ? 'first' : 'last'
         "
         cols="6"
         sm="3"
@@ -34,7 +34,7 @@
       </v-col>
 
       <v-col cols="12" sm="7" md="6" xl="4" class="my-6">
-        <v-card flat>
+        <v-card outlined>
           <v-card-title class="headline">
             {{ item.title }}
           </v-card-title>

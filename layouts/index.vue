@@ -1,10 +1,10 @@
 <template>
   <v-app app>
     <the-header />
-    <v-main app class="grey lighten-4">
-      <v-fade-transition
-        ><v-container fluid> <nuxt /></v-container>
-      </v-fade-transition>
+    <v-main class="grey lighten-4">
+      <v-slide-y-reverse-transition>
+        <nuxt />
+      </v-slide-y-reverse-transition>
     </v-main>
   </v-app>
 </template>

@@ -1,11 +1,14 @@
 <template>
-  <div />
+  <v-card flat>
+    <v-row justify="center"> </v-row>
+  </v-card>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
-  name: 'IntroductionPages',
-  components: {},
+  name: 'IconCard',
 })
 </script>
+
+<style></style>

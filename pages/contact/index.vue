@@ -1,10 +1,16 @@
 <template>
   <index-grid>
-    <index-card page-title="お問い合わせ">
+    <index-card :url-lists="urlLists" page-title="お問い合わせ">
       <v-layout>
         <v-row justify="center">
-          <v-col cols="8">
-            <v-form class="my-7">
+          <v-col cols="8" lg="6">
+            <form
+              class="my-7"
+              netlify
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+            >
+              <input type="hidden" name="form-name" value="contact" />
               <v-text-field outlined name="title" type="input" label="件名" />
               <v-text-field
                 outlined
@@ -18,8 +24,8 @@
                 type="text"
                 label="お問い合わせ内容"
               />
-              <v-btn block outlined>送信</v-btn>
-            </v-form>
+              <v-btn type="submit" block outlined>送信</v-btn>
+            </form>
           </v-col>
         </v-row>
       </v-layout>
@@ -28,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
 import IndexGrid from '@/components/molecules/girds/IndexGrid.vue'
 import IndexCard from '@/components/organisms/cards/IndexCard.vue'
 
@@ -37,6 +43,23 @@ export default defineComponent({
   components: {
     IndexGrid,
     IndexCard,
+  },
+  setup() {
+    const urlLists = ref([
+      {
+        text: 'Top',
+        href: '/',
+        disabled: false,
+      },
+      {
+        text: 'Contact',
+        href: '/contact',
+        disabled: true,
+      },
+    ])
+    return {
+      urlLists,
+    }
   },
 })
 </script>

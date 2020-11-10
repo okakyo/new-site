@@ -1,13 +1,13 @@
 <template>
   <index-grid>
-    <index-card page-title="お知らせ">
+    <index-card :url-lists="urlLists" page-title="プロフィール">
       <activity-window :service-descriptions="serviceDescriptions" />
     </index-card>
   </index-grid>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
 import IndexGrid from '@/components/molecules/girds/IndexGrid.vue'
 import IndexCard from '@/components/organisms/cards/IndexCard.vue'
 import ActivityWindow from '@/components/templates/index/ActivityWindow.vue'
@@ -23,6 +23,23 @@ export default defineComponent({
     console.log(serviceDescriptions)
     return {
       serviceDescriptions,
+    }
+  },
+  setup() {
+    const urlLists = ref([
+      {
+        text: 'Top',
+        href: '/',
+        disabled: false,
+      },
+      {
+        text: 'About',
+        href: '/about',
+        disabled: true,
+      },
+    ])
+    return {
+      urlLists,
     }
   },
 })

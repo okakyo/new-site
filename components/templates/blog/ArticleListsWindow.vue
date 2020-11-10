@@ -1,6 +1,6 @@
 <template>
   <v-list>
-    <v-row justify="center">
+    <v-row justify="center" class="pa-6">
       <v-col
         v-for="(article, index) in articles"
         :key="index"
@@ -10,17 +10,9 @@
         xl="3"
       >
         <article-card
-          v-if="$vuetify.breakpoint.smAndUp"
           :card-title="article.title"
           :card-thumbnail="article.thumbnail"
-          :card-path="article.path"
-        />
-
-        <article-list-content
-          v-else
-          :list-title="article.title"
-          :list-thumbnail="article.thumbnail"
-          :list-path="article.path"
+          :card-path="'/blog/article' + article.path.split('/blog')[1]"
         />
       </v-col>
     </v-row>
