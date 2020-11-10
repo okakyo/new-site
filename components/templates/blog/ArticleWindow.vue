@@ -57,11 +57,14 @@ export default defineComponent({
 }
 p {
   padding: 0.75em;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
   line-height: 1.8em;
   white-space: pre-wrap;
 }
 .nuxt-content ul {
   margin-bottom: 1.5em;
+  margin-left: 0.5em;
 }
 .nuxt-content li {
   line-height: 2em;
@@ -77,14 +80,17 @@ p {
   box-shadow: none;
 }
 
-.nuxt-content code {
-  box-shadow: none;
-}
 .nuxt-content code::before {
   content: '';
 }
-
 .v-application code {
+  background-color: #eee;
+  color: #333;
+  padding: 0.5em;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
+}
+.nuxt-content-highlight code {
   background-color: initial;
   padding: initial;
   font-size: initial;
