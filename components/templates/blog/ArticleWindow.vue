@@ -33,11 +33,13 @@ export default defineComponent({
   width: inherit;
   padding: 5%;
   padding-top: 2.5%;
+  line-break: auto;
 }
 .article {
   width: inherit;
   padding: 5%;
   padding-bottom: 2.5%;
+  line-break: auto;
 }
 .nuxt-content h2 {
   margin-bottom: 0.75em;
@@ -81,7 +83,7 @@ p {
 }
 
 .nuxt-content code::before {
-  content: '';
+  content: initial;
 }
 .v-application code {
   background-color: #eee;
@@ -100,10 +102,9 @@ p {
 .nuxt-content-highlight pre,
 .nuxt-content-highlight code {
   color: #ccc;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   margin-bottom: 1.5rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  word-wrap: none;
 }
 </style>
