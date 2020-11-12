@@ -1,9 +1,6 @@
 <template>
   <v-card class="pt-3">
-    <article-header
-      :article-title="article.title"
-      :article-img="article.thumbnail"
-    />
+    <article-header :article-title="article.title" />
 
     <v-divider />
     <div class="article">

@@ -3,9 +3,9 @@
     <v-breadcrumbs :items="urlLists"> </v-breadcrumbs>
     <v-toolbar class="my-3" flat>
       <v-spacer />
-      <v-toolbar-subtitle class="headline">
+      <div class="headline">
         <h3>{{ articleTitle }}</h3>
-      </v-toolbar-subtitle>
+      </div>
       <v-spacer />
     </v-toolbar>
     <v-row justify="center" class="mt-5">
@@ -36,10 +36,6 @@ export default defineComponent({
   name: 'ArticleHeader',
   props: {
     articleTitle: String,
-    articleImg: {
-      type: String,
-      default: '/noimage.png',
-    },
   },
   setup(props: any, { root }) {
     const currentPath = root.$route.path

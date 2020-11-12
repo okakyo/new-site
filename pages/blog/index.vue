@@ -43,7 +43,7 @@ export default defineComponent({
     let articleInfo
     try {
       articleInfo = await $content('blog')
-        .only(['title', 'description', 'thumbnail', 'isOpen', 'path'])
+        .only(['title', 'description', 'tags', 'isOpen', 'path'])
         .limit(8)
         .fetch()
     } catch (e) {

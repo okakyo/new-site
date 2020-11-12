@@ -20,7 +20,6 @@ export default defineComponent({
   },
   async asyncData({ $content }) {
     const serviceDescriptions = await $content('index').sortBy('path').fetch()
-    console.log(serviceDescriptions)
     return {
       serviceDescriptions,
     }
