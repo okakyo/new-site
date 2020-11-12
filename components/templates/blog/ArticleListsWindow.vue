@@ -1,22 +1,14 @@
 <template>
-  <v-list>
-    <v-row justify="center" class="pa-6">
-      <v-col
-        v-for="(article, index) in articles"
-        :key="index"
-        cols="12"
-        sm="6"
-        md="4"
-        xl="3"
-      >
-        <article-card
-          :card-title="article.title"
-          :card-thumbnail="article.thumbnail"
-          :card-path="'/blog/article' + article.path.split('/blog')[1]"
-        />
-      </v-col>
-    </v-row>
-  </v-list>
+  <v-row class="pa-2">
+    <v-col v-for="(article, index) in articles" :key="index" cols="12" md="6">
+      <article-card
+        :card-title="article.title"
+        :card-description="article.description"
+        :card-tags="article.tags"
+        :card-path="'/blog/article' + article.path.split('/blog')[1]"
+      />
+    </v-col>
+  </v-row>
 </template>
 
 <script lang="ts">

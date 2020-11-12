@@ -1,19 +1,14 @@
 <template>
   <v-container>
     <v-breadcrumbs :items="urlLists"> </v-breadcrumbs>
-    <v-toolbar flat>
+    <v-toolbar class="my-3" flat>
       <v-spacer />
-      <v-toolbar-title class="headline">
+      <div class="headline">
         <h3>{{ articleTitle }}</h3>
-      </v-toolbar-title>
+      </div>
       <v-spacer />
     </v-toolbar>
-    <v-row justify="center">
-      <v-col cols="6" sm="4" lg="3">
-        <v-img :lazy-src="articleImg" :src="articleImg" />
-      </v-col>
-    </v-row>
-    <v-row justify="center">
+    <v-row justify="center" class="mt-5">
       <!-- > ここに、SNS ボタンを用意する <--->
       <v-btn
         v-for="button in shareButtons"
@@ -41,7 +36,6 @@ export default defineComponent({
   name: 'ArticleHeader',
   props: {
     articleTitle: String,
-    articleImg: String,
   },
   setup(props: any, { root }) {
     const currentPath = root.$route.path

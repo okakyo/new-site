@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 import SidebarToc from '@/components/molecules/lists/SidebarToc.vue'
-// 動作確認
+
 export default defineComponent({
   name: 'ArticleGrid',
   components: {

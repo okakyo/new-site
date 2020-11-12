@@ -1,10 +1,11 @@
 <template>
   <v-card class="pt-3">
-    <article-header
-      :article-title="article.title"
-      :article-img="article.thumbnail"
-    />
+    <article-header :article-title="article.title" />
+
     <v-divider />
+    <div class="article">
+      <p>{{ article.description }}</p>
+    </div>
     <nuxt-content :document="article" />
   </v-card>
 </template>
@@ -28,7 +29,14 @@ export default defineComponent({
 .nuxt-content {
   width: inherit;
   padding: 5%;
-  padding-top: 3%;
+  padding-top: 2.5%;
+  line-break: auto;
+}
+.article {
+  width: inherit;
+  padding: 5%;
+  padding-bottom: 2.5%;
+  line-break: auto;
 }
 .nuxt-content h2 {
   margin-bottom: 0.75em;
@@ -46,13 +54,16 @@ export default defineComponent({
 
   border-left: solid 5px #7db4e6; /* 左線 */
 }
-.nuxt-content p {
+p {
   padding: 0.75em;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
   line-height: 1.8em;
   white-space: pre-wrap;
 }
 .nuxt-content ul {
   margin-bottom: 1.5em;
+  margin-left: 0.5em;
 }
 .nuxt-content li {
   line-height: 2em;
@@ -68,14 +79,17 @@ export default defineComponent({
   box-shadow: none;
 }
 
-.nuxt-content code {
-  box-shadow: none;
-}
 .nuxt-content code::before {
-  content: '';
+  content: initial;
 }
-
 .v-application code {
+  background-color: #eee;
+  color: #333;
+  padding: 0.5em;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
+}
+.nuxt-content-highlight code {
   background-color: initial;
   padding: initial;
   font-size: initial;
@@ -85,10 +99,9 @@ export default defineComponent({
 .nuxt-content-highlight pre,
 .nuxt-content-highlight code {
   color: #ccc;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   margin-bottom: 1.5rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  word-wrap: none;
 }
 </style>
