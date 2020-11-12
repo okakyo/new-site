@@ -6,7 +6,7 @@ backend:
     - admin
 
 media_folder: static/img/post
-public_folder: /img
+public_folder: /img/post
 
 publish_mode: editorial_workflow
 
