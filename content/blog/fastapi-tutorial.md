@@ -10,7 +10,7 @@ date: 2020-1-18T04:52:54.681Z
 ---
 
 ## FastAPI とは
-FastAPI は、Django や Flask といった Python の Web フレームワークの1つです。
+FastAPI は、Django や Flask といった Python の Web フレームワークの 1 つです。
 
 このフレームワークには、次のような特徴があります。
 - OpenAPI に基づいて、自動的に JSON Schema モデルを生成してくれます
