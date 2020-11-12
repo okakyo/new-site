@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-card class="pa-2" nuxt outlined link :to="cardPath">
-      <v-list>
-        <v-list-item> </v-list-item>
-      </v-list>
-      <v-card-title class="headline"></v-card-title>
+      <v-img :src="cardThumbnail" />
+      <v-card-title class="headline">
+        {{ cardTitle }}
+      </v-card-title>
       <div class="pa-4">
         <v-btn
           v-for="(tag, index) in cardTags"
@@ -27,7 +27,10 @@ export default defineComponent({
   name: 'IconCard',
   props: {
     cardPath: String,
-    cardThumbnail: String,
+    cardThumbnail: {
+      type: String,
+      default: '/img/thumbnail/noimage.png',
+    },
     cardTitle: {
       type: String,
       default: 'Sample',
