@@ -14,7 +14,6 @@
   "lint-staged": {
     "*.{ts,js,vue}": "eslint --fix",
     "*.{md}": "textlint --cache $(git diff master --name-only) --fix"
-    
   },
   "husky": {
     "hooks": {
