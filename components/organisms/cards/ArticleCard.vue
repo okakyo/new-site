@@ -1,7 +1,10 @@
 <template>
   <div>
     <v-card class="pa-2" nuxt outlined link :to="cardPath">
-      <v-card-title class="headline">{{ cardTitle }}</v-card-title>
+      <v-list>
+        <v-list-item> </v-list-item>
+      </v-list>
+      <v-card-title class="headline"></v-card-title>
       <div class="pa-4">
         <v-btn
           v-for="(tag, index) in cardTags"
