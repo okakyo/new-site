@@ -21,7 +21,6 @@ export default {
     ArticleWindow,
     SideWindow,
   },
-  props: {},
   async asyncData({ $content, params }) {
     const pageId = params.id
     const article = await $content('blog', pageId).fetch()
