@@ -10,18 +10,19 @@
 </template>
 
 <script lang="ts">
-// import { defineComponent } from '@nuxtjs/composition-api';
+import { defineComponent } from '@nuxtjs/composition-api'
 import ArticleGrid from '@/components/molecules/girds/ArticleGrid.vue'
 import ArticleWindow from '@/components/templates/blog/ArticleWindow.vue'
 import SideWindow from '@/components/templates/blog/SideWindow.vue'
-export default {
+
+export default defineComponent({
   name: 'IntroductionPages',
   components: {
     ArticleGrid,
     ArticleWindow,
     SideWindow,
   },
-  async asyncData({ $content, params }) {
+  async asyncData({ params, $content }) {
     const pageId = params.id
     const article = await $content('blog', pageId).fetch()
     const articleList = await $content('blog')
@@ -34,7 +35,7 @@ export default {
       articleList,
     }
   },
-}
+})
 </script>
 
 <style>
