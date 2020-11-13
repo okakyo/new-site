@@ -83,7 +83,11 @@ export default {
   // Content module configuration (https://go.nuxtjs.dev/content-config)
   content: {
     markdown: {
-      remarkPlugins: ['remark-emoji'],
+      remarkPlugins: [
+        'remark-emoji',
+        'remark-simple-plantuml',
+        'remark-oembed',
+      ],
       prism: {
         theme: 'prismjs/themes/prism-tomorrow.css',
       },

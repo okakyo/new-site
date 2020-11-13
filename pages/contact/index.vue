@@ -4,28 +4,30 @@
       <v-layout>
         <v-row justify="center">
           <v-col cols="8" lg="6">
-            <form
-              class="my-7"
-              netlify
-              netlify-honeypot="bot-field"
-              data-netlify="true"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <v-text-field outlined name="title" type="input" label="件名" />
-              <v-text-field
-                outlined
-                name="email"
-                type="email"
-                label="メールアドレス"
-              />
-              <v-textarea
-                outlined
-                name="message"
-                type="text"
-                label="お問い合わせ内容"
-              />
-              <v-btn type="submit" block outlined>送信</v-btn>
-            </form>
+            <client-only>
+              <form
+                class="my-7"
+                netlify
+                netlify-honeypot="bot-field"
+                data-netlify="true"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <v-text-field outlined name="title" type="input" label="件名" />
+                <v-text-field
+                  outlined
+                  name="email"
+                  type="email"
+                  label="メールアドレス"
+                />
+                <v-textarea
+                  outlined
+                  name="message"
+                  type="text"
+                  label="お問い合わせ内容"
+                />
+                <v-btn type="submit" block outlined>送信</v-btn>
+              </form>
+            </client-only>
           </v-col>
         </v-row>
       </v-layout>
