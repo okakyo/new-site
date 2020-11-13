@@ -30,9 +30,7 @@ export default defineComponent({
       .limit(8)
       .where({ isOpen: true })
       .fetch()
-    if (!articleList.length) {
-      return error({ statusCode: 404, message: 'Not Found Article Pages' })
-    }
+
     return {
       article,
       articleList,
