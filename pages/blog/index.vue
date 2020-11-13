@@ -3,7 +3,7 @@
     <index-card :url-lists="urlLists" page-title="記事の一覧">
       <template>
         <article-lists-window :articles="articleInfo" />
-        <v-pagination />
+        <v-pagination value="1" :length="articleLength" />
       </template>
     </index-card>
   </index-grid>
@@ -40,27 +40,24 @@ export default defineComponent({
     }
   },
   async asyncData({ $content }) {
-    let articleInfo
-    try {
-      articleInfo = await $content('blog')
-        .only([
-          'title',
-          'description',
-          'tags',
-          'isOpen',
-          'path',
-          'thumbnail',
-          'date',
-        ])
-        .sortBy('date')
-        .limit(8)
-        .where({ isOpen: true })
-        .fetch()
-    } catch (e) {
-      console.error(e)
-    }
+    const articleLength = await $content('blog').fetch().length
+    const articleInfo = await $content('blog')
+      .only([
+        'title',
+        'description',
+        'tags',
+        'isOpen',
+        'path',
+        'thumbnail',
+        'date',
+      ])
+      .sortBy('date', 'desc')
+      .limit(8)
+      .where({ isOpen: true })
+      .fetch()
     return {
       articleInfo,
+      articleLength,
     }
   },
 })
