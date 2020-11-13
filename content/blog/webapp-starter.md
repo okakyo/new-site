@@ -45,7 +45,7 @@ JQuery はこれまで多くのサイトで動的な動作を扱うために使�
 - [そろそろなぜjQueryを使うのが難しいのかをちゃんとまとめようと思う。｜榊原昌彦｜note](https://note.com/rdlabo/n/ndfe07e0c0bcb?creator_urlname=rdlabo)
 - [wordpressでの海外リダイレクトのハッキング事例 \| hycko.blog](https://blog.hycko.net/5510.php)
 
-現在、それらのフレームワークで有名なものは、**Angular, Vue.js.js, React** があります。Web 初心者であれば Vue.js.js から始めた方がフロントエンドの概念を把握しやすいのでおすすめです。しかし、現在多くの企業では React を利用して開発が行われていますので、React から始めてもいいかもしれません。
+現在、それらのフレームワークで有名なものは、**Angular, Vue, React** があります。Web 初心者であれば Vue から始めた方がフロントエンドの概念を把握しやすいのでおすすめです。しかし、現在多くの企業では React を利用して開発が行われていますので、React から始めてもいいかもしれません。
 
 
 これらのフレームワークは、**GitHub Pages や Netlify、Firebase** を通して無料で公開できます。どんどん作って公開していきましょう。

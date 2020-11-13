@@ -1,6 +1,6 @@
 <template>
   <index-grid>
-    <index-card :url-lists="urlLists" page-title="お問い合わせ">
+    <index-card :url-lists="urlLists" page-title="Contact">
       <v-layout>
         <v-row justify="center">
           <v-col cols="8" lg="6">
@@ -11,13 +11,13 @@
                 outlined
                 name="email"
                 type="email"
-                label="メールアドレス"
+                label="Mail Adress"
               />
               <v-textarea
                 outlined
                 name="message"
                 type="text"
-                label="お問い合わせ内容"
+                label="Text Messages"
               />
               <v-btn type="submit" block outlined>送信</v-btn>
             </form>

@@ -7,10 +7,11 @@ rules:
   - expected: Cloud Functions
     pattern:
       - cloud functions
-  - expected: Vue.js
+  - expected: Vue
     pattern:
       - VueJS
-      - Vue
+      - Vue.js
+      
   - expected: Jamstack
     pattern:
       - JAMStack
