@@ -1,4 +1,4 @@
-# new-denx-site
+# New-Blog-Site
 
 ![ogp](https://user-images.githubusercontent.com/29594820/99104191-06d17300-2624-11eb-818c-91d3d6aa49b3.png)  
 I created my Portfolio and Blog site with Nuxt.js

@@ -1,7 +1,11 @@
 <template>
   <div>
     <v-card class="pa-2" nuxt outlined link :to="cardPath">
-      <v-img :href="cardThumbnail" />
+      <v-img
+        v-if="$vuetify.breakpoint.mdAndUp"
+        :src="cardThumbnail"
+        :lazy-src="cardThumbnail"
+      />
       <v-card-title class="headline">
         {{ cardTitle }}
       </v-card-title>
