@@ -43,7 +43,16 @@ export default defineComponent({
     let articleInfo
     try {
       articleInfo = await $content('blog')
-        .only(['title', 'description', 'tags', 'isOpen', 'path', 'thumbnail'])
+        .only([
+          'title',
+          'description',
+          'tags',
+          'isOpen',
+          'path',
+          'thumbnail',
+          'date',
+        ])
+        .sortBy('date')
         .limit(8)
         .where({ isOpen: true })
         .fetch()
