@@ -38,6 +38,7 @@ export default defineComponent({
   padding-bottom: 2.5%;
   line-break: auto;
 }
+
 .nuxt-content h2 {
   margin-bottom: 0.75em;
   padding: 0.5em; /* 文字周りの余白 */
@@ -69,6 +70,11 @@ p {
   line-height: 2em;
   margin-block-end: 0.5em;
 }
+
+.nuxt-content p img {
+  text-align: center;
+}
+
 .nuxt-content img {
   max-width: 90%;
   margin: 0.5rem;

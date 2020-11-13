@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card class="pa-2" nuxt outlined link :to="cardPath">
-      <v-img :src="cardThumbnail" />
+      <v-img :href="cardThumbnail" />
       <v-card-title class="headline">
         {{ cardTitle }}
       </v-card-title>
@@ -29,7 +29,8 @@ export default defineComponent({
     cardPath: String,
     cardThumbnail: {
       type: String,
-      default: '/img/thumbnail/noimage.png',
+      default:
+        'https://user-images.githubusercontent.com/29594820/99104055-cd990300-2623-11eb-9891-3081271c5655.png',
     },
     cardTitle: {
       type: String,
