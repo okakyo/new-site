@@ -4,67 +4,35 @@
       <article-window :article="article" />
     </template>
     <template v-slot:RightSide>
-      <v-card> sample </v-card>
+      <side-window :article-list="articleList" />
     </template>
   </article-grid>
 </template>
 
-<script>
+<script lang="ts">
 // import { defineComponent } from '@nuxtjs/composition-api';
 import ArticleGrid from '@/components/molecules/girds/ArticleGrid.vue'
 import ArticleWindow from '@/components/templates/blog/ArticleWindow.vue'
+import SideWindow from '@/components/templates/blog/SideWindow.vue'
 export default {
   name: 'IntroductionPages',
   components: {
     ArticleGrid,
     ArticleWindow,
+    SideWindow,
   },
   props: {},
   async asyncData({ $content, params }) {
     const pageId = params.id
     const article = await $content('blog', pageId).fetch()
+    const articleList = await $content('blog')
+      .only(['title', 'description', 'tags', 'isOpen', 'path', 'thumbnail'])
+      .limit(8)
+      .where({ isOpen: true })
+      .fetch()
     return {
       article,
-    }
-  },
-  head() {
-    return {
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.article.description,
-        },
-        {
-          hid: 'og:site_name',
-          property: 'og:site_name',
-          content: "Okakyo's Blog",
-        },
-        { hid: 'og:type', property: 'og:type', content: 'website' },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content:
-            'https://okakyo-new-portfolio.netlify.app' + this.$router.path,
-        },
-        { hid: 'og:title', property: 'og:title', content: "Okakyo's Blog" },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.article.description,
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: 'https://okakyo-new-portfolio.netlify.app/img/ogp.png',
-        },
-        {
-          hid: 'twitter:card',
-          name: 'twitter:card',
-          content: 'summary_large_image',
-        },
-        { hid: 'twitter:site', name: 'twitter:site', content: '@31415O_Kyo' },
-      ],
+      articleList,
     }
   },
 }
