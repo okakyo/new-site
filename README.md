@@ -6,7 +6,7 @@ I created my Portfolio and Blog site with Nuxt.js
 ## Main Framework
 - Frontend 
     - Nuxt.js 
-    - Vuetify
+    - Vue.jstify
     - Nuxt/content
 
 - Deploy

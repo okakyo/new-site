@@ -5,6 +5,7 @@
         :card-title="article.title"
         :card-description="article.description"
         :card-tags="article.tags"
+        :card-thumbnail="article.thumbnail"
         :card-path="'/blog/article' + article.path.split('/blog')[1]"
       />
     </v-col>

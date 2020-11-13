@@ -4,9 +4,10 @@ tags:
   - 初心者向け 
   - Webアプリ開発 
 slugs: web-app-starter 
+isOpen: true  
 description: >-
   こんにちは、おかきょーです。今回は、今からWeb アプリを始めたいと考えている学生へ向けて、個人的に効率よくWeb アプリ開発を学ぶ方法について書いて行きたいと考えてこの記事を書きました。
-thumbnail: /uploads/code-1839406_640-min.jpg 
+thumbnail: https://user-images.githubusercontent.com/29594820/99104055-cd990300-2623-11eb-9891-3081271c5655.png
 date: 2020-1-21T04:52:54.681Z
 ---
 
@@ -44,7 +45,7 @@ JQuery はこれまで多くのサイトで動的な動作を扱うために使�
 - [そろそろなぜjQueryを使うのが難しいのかをちゃんとまとめようと思う。｜榊原昌彦｜note](https://note.com/rdlabo/n/ndfe07e0c0bcb?creator_urlname=rdlabo)
 - [wordpressでの海外リダイレクトのハッキング事例 \| hycko.blog](https://blog.hycko.net/5510.php)
 
-現在、それらのフレームワークで有名なものは、**Angular, Vue.js, React** があります。Web 初心者であれば Vue.js から始めた方がフロントエンドの概念を把握しやすいのでおすすめです。しかし、現在多くの企業では React を利用して開発が行われていますので、React から始めてもいいかもしれません。
+現在、それらのフレームワークで有名なものは、**Angular, Vue.js.js, React** があります。Web 初心者であれば Vue.js.js から始めた方がフロントエンドの概念を把握しやすいのでおすすめです。しかし、現在多くの企業では React を利用して開発が行われていますので、React から始めてもいいかもしれません。
 
 
 これらのフレームワークは、**GitHub Pages や Netlify、Firebase** を通して無料で公開できます。どんどん作って公開していきましょう。

@@ -5,6 +5,7 @@
         v-if="$vuetify.breakpoint.mdAndUp"
         :src="cardThumbnail"
         :lazy-src="cardThumbnail"
+        height="180"
       />
       <v-card-title class="headline">
         {{ cardTitle }}

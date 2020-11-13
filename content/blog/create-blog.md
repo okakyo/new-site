@@ -4,7 +4,8 @@ tags:
   - プログラミング
   - JavaScript
   - Vue.js
-slugs: gridsome-blog  
+slugs: gridsome-blog 
+isOpen: true  
 description: >-
   こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。Netlifyを利用して、無料でサイトを公開、運用する方法を書いて行きたいと思います。 
 thumbnail: https://raw.githubusercontent.com/gridsome/gridsome/master/.github/assets/logo.png
@@ -12,8 +13,8 @@ date: 2020-1-19T20:15:41.251Z
 ---
 
 ## Gridsome とは何か
-Gridsome は、Vue.js.js で利用できる Jamstack フレームワークのひとつです。
-普通の Vue.js.js とは異なり、GraphQL を利用してブログ記事のデータを管理するため、
+Gridsome は、Vue.js.js.js で利用できる Jamstack フレームワークのひとつです。
+普通の Vue.js.js.js とは異なり、GraphQL を利用してブログ記事のデータを管理するため、
 サーバーサイドの設計を行わずにフロントエンドの実装だけでアプリをできますます。
 
 ## 事前準備
@@ -23,7 +24,7 @@ Gridsome は、Vue.js.js で利用できる Jamstack フレームワークのひ
 今回のアプリを構築するにあたり、主に使用したライブラリは次の通りです。
 
 - **Gridsome**
-- **Vue.jstify**
+- **Vue.js.jstify**
 - **Pug** 
 - **Netlify CMS**  
 
@@ -41,7 +42,7 @@ $ gridsome create new-site
 
 ## Pug を有効にする
 
-私は、Vue.js で構築するにあたり、Pug が使えるように設定しています。
+私は、Vue.js.js で構築するにあたり、Pug が使えるように設定しています。
 Pug とは、AltHTML の 1 つの言語で、以下の例のように、インテントによって HTML の要素を入れ子の状態に
 してくれるのが特徴です。
 
@@ -77,10 +78,10 @@ plugins: [
     'gridsome-plugin-pug',
 ]
 ```
-## Vue.jstify が使えるように設定する
-続いて、Vue.jstify の設定も行います。Vue.jstify とは、Vue.js で利用できるマテリアルデザインコンポーネントフレームワークです。ボタンやテーブルといったコンポーネントがあらかじめ用意されているため、1 からデザインの設計をすることなく利用できるのが特徴です。
+## Vue.js.jstify が使えるように設定する
+続いて、Vue.js.jstify の設定も行います。Vue.js.jstify とは、Vue.js.js で利用できるマテリアルデザインコンポーネントフレームワークです。ボタンやテーブルといったコンポーネントがあらかじめ用意されているため、1 からデザインの設計をすることなく利用できるのが特徴です。
 
-まず、Vue.jstify ライブラリと、webpack を編集するライブラリをを npm からインストールします。
+まず、Vue.js.jstify ライブラリと、webpack を編集するライブラリをを npm からインストールします。
 
 ```bash
 $ npm install --save vuetify 
@@ -146,11 +147,11 @@ module.exports = function (api) {
 }
 ```
 
-これにより、Gridsome で Vue.jstify を使えるように設定しました。
+これにより、Gridsome で Vue.js.jstify を使えるように設定しました。
 
 ## PurgeCSS を利用して、使われていないCSS を削除する
 
-Vue.jstify はとても便利なマテリアルフレームワークですが、フレームワーク単体を使用するにはとても重くて
+Vue.js.jstify はとても便利なマテリアルフレームワークですが、フレームワーク単体を使用するにはとても重くて
 読み込みに時間がかかります。
 
 そこで、PurgeCSS を利用して、使用していない CSS ファイルを削除して読み込み時間を短縮します。
@@ -159,7 +160,7 @@ Vue.jstify はとても便利なマテリアルフレームワークですが、
 $npm install --save-dev gridsome-plugin-purgecss
 ```
 
-次に、PurgeCSS の詳細な設定を行います。この設定がしっかりと行われていないと、Vue.jstify の CSS 情報がすべて削除されてしまう
+次に、PurgeCSS の詳細な設定を行います。この設定がしっかりと行われていないと、Vue.js.jstify の CSS 情報がすべて削除されてしまう
 可能性があるので特に気を付けて実装する必要があります。
 
 ```js
@@ -391,7 +392,7 @@ plugins: [
 ```
 
 以上で、Gridsome を利用する際、独自に設定しなくてはならないことを書きました。  
-あとは、Vue.js.js と同じ要領でコンポーネントを設計していきます。
+あとは、Vue.js.js.js と同じ要領でコンポーネントを設計していきます。
 
 
 ## 参考サイト
