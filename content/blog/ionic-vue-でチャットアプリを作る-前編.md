@@ -8,7 +8,7 @@ tags:
   - Vue
   - チュートリアル
   - Firebase
-isOpen: false
+isOpen: true
 description: この記事では, Ionic / Vue を利用してチャットアプリを構築するまでの内容をまとめました。
 ---
 チュートリアルで作成したリポジトリはこちらで公開しています。
