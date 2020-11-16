@@ -33,20 +33,20 @@ npm run serve
 
 ![localhost](/img/post/ionic-vue-serve.png "running-view")
 
-## コンポーネントの設計
+続いて、Firebase で開発を行うため必要なライブラリを install します。
+
+\`npm install -g firebase-tools\`
+
+
+
+## コンポーネント設計
 
 続いて、コンポーネント周りを設計します。コンポーネントを管理することで、Web 上で使われる似たようなフレームワークを使いまわせたり、共有することができるようになります。
-
-個人的には、Atoms はすでにCSS フレームワーク(Vuetify, Bulma など) がすでに定義されているものとして、　molecules, organisms, templates でディレクトリを管理します。pages はすでに別のディレクトリで表示されるものとしています。
-
-## チャット回りの設計
-
-### コンポーネント設計
 
 コンポーネントの設計には、**Atomic Design** を採用しました。
 ![Atomic Design](https://bradfrost.com/wp-content/uploads/2013/06/atomic-design.png)
 
-
+Atoms はすでにCSS フレームワーク(Vuetify, Bulma など) がすでに定義されているものとして、　molecules, organisms, templates でディレクトリを管理します。pages はすでに別のディレクトリで表示されるものとしています
 
 ## 最後に
 
