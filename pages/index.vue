@@ -1,7 +1,9 @@
 <template>
   <div>
     <illust-window />
-    <v-img :src="waveImg"></v-img>
+    <v-img :src="waveUpImg"></v-img>
+    <link-window />
+    <v-img :src="waveDownImg" />
   </div>
 </template>
 
@@ -9,16 +11,20 @@
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 
 import IllustWindow from '@/components/templates/index/IllustWindow.vue'
+import LinkWindow from '@/components/templates/index/LinkWindow.vue'
 
 export default defineComponent({
   components: {
     IllustWindow,
+    LinkWindow,
   },
   layout: 'index',
   setup() {
-    const waveImg = ref(require('@/assets/images/wave-up.svg'))
+    const waveUpImg = ref(require('@/assets/images/wave-up.svg'))
+    const waveDownImg = ref(require('@/assets/images/wave-down.svg'))
     return {
-      waveImg,
+      waveUpImg,
+      waveDownImg,
     }
   },
   head() {

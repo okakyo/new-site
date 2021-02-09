@@ -1,6 +1,6 @@
 <template>
   <index-grid>
-    <index-card :url-lists="urlLists" page-title="Profile">
+    <index-card nuxt :url-lists="urlLists" page-title="Profile">
       <activity-window :service-descriptions="serviceDescriptions" />
     </index-card>
   </index-grid>
