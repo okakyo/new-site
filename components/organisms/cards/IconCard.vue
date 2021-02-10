@@ -1,6 +1,6 @@
 <template>
   <v-card flat>
-    <v-img class="pa-3" :src="require('@/assets/images/server.svg')" />
+    <v-img class="pa-3" src="/img/ogp.png" />
   </v-card>
 </template>
 
