@@ -1,6 +1,6 @@
 <template>
   <v-card outlined>
-    <v-card-title class="headline">
+    <v-card-title style="text-align: center">
       {{ cardTitle }}
     </v-card-title>
     <v-card-text>
@@ -9,12 +9,12 @@
   </v-card>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'DescriptionCard',
   props: {
-    CardTitle: {
+    cardTitle: {
       type: String,
       reqiored: true,
       default: '',
@@ -27,5 +27,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style></style>

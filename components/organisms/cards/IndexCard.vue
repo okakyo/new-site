@@ -1,6 +1,12 @@
 <template>
   <v-card :outlined="outlined" class="ma-3">
-    <v-breadcrumbs v-if="urlLists" :items="urlLists" />
+    <v-breadcrumbs v-if="urlLists" nuxt :items="urlLists">
+      <template v-slot:item="{ item }">
+        <v-breadcrumbs-item :to="item.href" :disabled="item.disabled">
+          {{ item.text }}
+        </v-breadcrumbs-item>
+      </template>
+    </v-breadcrumbs>
     <v-card-title class="headline">{{ PageTitle }}</v-card-title>
     <v-divider />
     <slot />

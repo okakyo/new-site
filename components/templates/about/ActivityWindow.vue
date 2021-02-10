@@ -5,7 +5,7 @@
       :key="index"
       wrap
       justify="center"
-      class="my-5 text-center"
+      class="my-5"
     >
       <v-col
         class="my-6"
@@ -20,27 +20,19 @@
         <v-lazy
           v-model="lazyDescript[index]"
           :options="{
-            threshold: 1.0,
+            threshold: 0.7,
           }"
           transition="slide-x-transition"
         >
-          <v-card flat>
-            <v-card-title>
-              <h3 class="">Hello World</h3>
-            </v-card-title>
-          </v-card>
+          <icon-card />
         </v-lazy>
       </v-col>
 
       <v-col cols="12" sm="7" md="6" xl="4" class="my-6">
-        <v-card outlined>
-          <v-card-title class="headline">
-            {{ item.title }}
-          </v-card-title>
-          <v-card-text>
-            {{ item.description }}
-          </v-card-text>
-        </v-card>
+        <description-card
+          :card-description="item.description"
+          :card-title="item.title"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -49,14 +41,12 @@
 import { defineComponent, reactive } from '@nuxtjs/composition-api'
 import DescriptionCard from '@/components/organisms/cards/DescriptionCard.vue'
 import IconCard from '@/components/organisms/cards/IconCard.vue'
-import ListGrid from '@/components/molecules/grids/ListGrid.vue'
 
 export default defineComponent({
   name: 'discription',
   components: {
     DescriptionCard,
     IconCard,
-    ListGrid,
   },
 
   // 注意：この部分の型のValidator を修正する必要あり
