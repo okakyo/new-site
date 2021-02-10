@@ -10,7 +10,7 @@
       <v-col
         class="my-6"
         :order="
-          $vuetify.breakpoint.mdAndUp && index % 2 == 0 ? 'first' : 'last'
+          $vuetify.breakpoint.mdAndUp && index % 2 == 1 ? 'last' : 'first'
         "
         cols="6"
         sm="3"
@@ -24,11 +24,10 @@
           }"
           transition="slide-x-transition"
         >
-          <v-card outlined>
+          <v-card flat>
             <v-card-title>
               <h3 class="">Hello World</h3>
             </v-card-title>
-            <v-card> </v-card>
           </v-card>
         </v-lazy>
       </v-col>
@@ -48,10 +47,17 @@
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from '@nuxtjs/composition-api'
+import DescriptionCard from '@/components/organisms/cards/DescriptionCard.vue'
+import IconCard from '@/components/organisms/cards/IconCard.vue'
+import ListGrid from '@/components/molecules/grids/ListGrid.vue'
 
 export default defineComponent({
   name: 'discription',
-  components: {},
+  components: {
+    DescriptionCard,
+    IconCard,
+    ListGrid,
+  },
 
   // 注意：この部分の型のValidator を修正する必要あり
   props: {

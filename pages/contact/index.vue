@@ -30,7 +30,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from '@nuxtjs/composition-api'
-import IndexGrid from '@/components/molecules/girds/IndexGrid.vue'
+import IndexGrid from '@/components/molecules/grids/IndexGrid.vue'
 import IndexCard from '@/components/organisms/cards/IndexCard.vue'
 
 export default defineComponent({

@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from '@vue/composition-api'
-import IllustGrid from '@/components/molecules/girds/IllustGrid.vue'
+import IllustGrid from '@/components/molecules/grids/IllustGrid.vue'
 
 export default defineComponent({
   components: {

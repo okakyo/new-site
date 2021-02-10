@@ -8,9 +8,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from '@nuxtjs/composition-api'
-import IndexGrid from '@/components/molecules/girds/IndexGrid.vue'
+import IndexGrid from '@/components/molecules/grids/IndexGrid.vue'
 import IndexCard from '@/components/organisms/cards/IndexCard.vue'
-import ActivityWindow from '@/components/templates/index/ActivityWindow.vue'
+import ActivityWindow from '@/components/templates/about/ActivityWindow.vue'
 export default defineComponent({
   name: 'IntroductionPages',
   components: {
