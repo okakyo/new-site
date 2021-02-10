@@ -2,13 +2,7 @@
   <v-container>
     <v-row>
       <v-col v-for="(link, index) in linkList" :key="index" cols="12" md="4">
-        <v-card nuxt :to="link.to">
-          <v-card-content>
-            <v-card-title>
-              {{ link.name }}
-            </v-card-title>
-          </v-card-content>
-        </v-card>
+        <link-card :to="link.to" :name="link.name" :img="link.img" />
       </v-col>
     </v-row>
   </v-container>
@@ -21,6 +15,7 @@ import LinkCard from '@/components/organisms/cards/LinkCard.vue'
 type NavList = {
   name: string
   to: string
+  img: string
 }
 
 export default defineComponent({
@@ -29,10 +24,13 @@ export default defineComponent({
     LinkCard,
   },
   setup() {
+    const profileImg = ref(require('@/assets/images/profile.svg'))
+    const worksImg = ref(require('@/assets/images/works.svg'))
+    const contactImg = ref(require('@/assets/images/contact.svg'))
     const linkList = ref<NavList[]>([
-      { name: 'About Me', to: '/about' },
-      { name: 'Works', to: '/works' },
-      { name: 'Contact', to: '/contact' },
+      { name: 'About Me', to: '/about', img: profileImg.value },
+      { name: 'Works', to: '/works', img: worksImg.value },
+      { name: 'Contact', to: '/contact', img: contactImg.value },
     ])
     return { linkList }
   },
