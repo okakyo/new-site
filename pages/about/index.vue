@@ -1,7 +1,9 @@
 <template>
   <index-grid>
     <index-card nuxt :url-lists="urlLists" page-title="Profile">
-      <activity-window :service-descriptions="serviceDescriptions" />
+      <template>
+        <activity-window :service-descriptions="serviceDescriptions" />
+      </template>
     </index-card>
   </index-grid>
 </template>
@@ -11,6 +13,7 @@ import { defineComponent, ref } from '@nuxtjs/composition-api'
 import IndexGrid from '@/components/molecules/grids/IndexGrid.vue'
 import IndexCard from '@/components/organisms/cards/IndexCard.vue'
 import ActivityWindow from '@/components/templates/about/ActivityWindow.vue'
+
 export default defineComponent({
   name: 'IntroductionPages',
   components: {
