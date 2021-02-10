@@ -25,7 +25,7 @@ export default {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: "Okakyo's Blog",
+        content: "Okakyo's Portfolio",
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -37,7 +37,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: "Okakyo's Portfolio & Blog Site",
+        content: "Okakyo's Portfolio  Site",
       },
       {
         hid: 'og:image',

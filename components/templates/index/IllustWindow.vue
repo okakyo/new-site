@@ -7,7 +7,7 @@
     </template>
     <template v-slot:RightSide>
       <v-card outlined color="transparent" class="white--text">
-        <h1 class="mb-6 text-center">Kyohei Oka</h1>
+        <h1 class="mb-6 text-center">Oka Kyohei</h1>
         <v-row justify="center">
           <h4>Portfolio - Blog Site</h4>
         </v-row>
