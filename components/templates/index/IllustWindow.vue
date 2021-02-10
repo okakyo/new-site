@@ -26,7 +26,6 @@ export default defineComponent({
   },
   setup() {
     const heroImg = ref(require('@/assets/images/index.svg'))
-
     return {
       heroImg,
     }
