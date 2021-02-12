@@ -8,9 +8,11 @@ works:
     url: "/" 
     GitHub: "https://github.com/okakyo/new-site"
   - title: "危険地帯アラート"
-    img: "/img/noimage.png"
+    img: "/img/danger0alert.png"
     url: "https://github.com/okakyo/DangerAlert"
   - title: "nomikai-suggest-bot"
     img: "/img/nomikai.png"
     url: "https://github.com/silloi/nomikai-suggest-bot"
-
+  - title: "Blog Site"
+    img: "/img/my-portfolio.png"
+    url: "https://github.com/okakyo/my-gridsome-site"
