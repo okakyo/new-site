@@ -24,7 +24,7 @@
           }"
           transition="slide-x-transition"
         >
-          <icon-card :card-img="item.img" :card-icon="item.icon" />
+          <icon-card :card-img="item.img" />
         </v-lazy>
       </v-col>
 

@@ -1,7 +1,6 @@
 <template>
   <v-card flat>
     <v-img v-if="cardImg" class="pa-3" :src="cardImg" />
-    <v-img v-else class="pa-3" :src="require(cardIcon)" />
   </v-card>
 </template>
 
@@ -13,12 +12,7 @@ export default defineComponent({
     cardImg: {
       type: String,
       required: false,
-      default: '/img/thumbnail/noimage.png',
-    },
-    cardIcon: {
-      type: String,
-      required: false,
-      default: '',
+      default: '/img/noimage.png',
     },
   },
 })

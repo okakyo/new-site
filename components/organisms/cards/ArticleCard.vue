@@ -28,7 +28,7 @@ export default defineComponent({
     cardImg: {
       type: String,
       required: false,
-      default: '/img/thumbnail/noimage.png',
+      default: '/img/noimage.png',
     },
   },
 })
