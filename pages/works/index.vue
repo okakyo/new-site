@@ -1,7 +1,7 @@
 <template>
   <index-grid>
     <index-card nuxt :url-lists="urlLists" page-title="Works">
-      <works-window :service-descriptions="serviceDescriptions" />
+      <works-window :works="works.works" />
     </index-card>
   </index-grid>
 </template>
@@ -19,9 +19,9 @@ export default defineComponent({
     WorksWindow,
   },
   async asyncData({ $content }) {
-    const serviceDescriptions = await $content('index').sortBy('path').fetch()
+    const works = await $content('works').sortBy('path').fetch()
     return {
-      serviceDescriptions,
+      works,
     }
   },
   setup() {

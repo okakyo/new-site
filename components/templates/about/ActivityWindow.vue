@@ -8,14 +8,14 @@
       class="my-5"
     >
       <v-col
-        class="my-6"
+        class="ma-6"
         :order="
           $vuetify.breakpoint.mdAndUp && index % 2 == 1 ? 'last' : 'first'
         "
         cols="6"
         sm="3"
-        md="4"
-        xl="3"
+        md="2"
+        xl="2"
       >
         <v-lazy
           v-model="lazyDescript[index]"
@@ -24,14 +24,15 @@
           }"
           transition="slide-x-transition"
         >
-          <icon-card />
+          <icon-card :card-img="item.img" :card-icon="item.icon" />
         </v-lazy>
       </v-col>
 
-      <v-col cols="12" sm="7" md="6" xl="4" class="my-6">
+      <v-col cols="12" sm="7" md="6" xl="6" class="my-6">
         <description-card
           :card-description="item.description"
           :card-title="item.title"
+          :sns-links="item.sns"
         />
       </v-col>
     </v-row>

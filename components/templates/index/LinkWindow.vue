@@ -1,8 +1,19 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col v-for="(link, index) in linkList" :key="index" cols="12" md="4">
-        <link-card :to="link.to" :name="link.name" :img="link.img" />
+    <v-row justify="center">
+      <v-col
+        v-for="(link, index) in linkList"
+        :key="index"
+        cols="10"
+        sm="8"
+        md="4"
+      >
+        <link-card
+          class="ma-3"
+          :to="link.to"
+          :name="link.name"
+          :img="link.img"
+        />
       </v-col>
     </v-row>
   </v-container>
