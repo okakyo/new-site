@@ -9,7 +9,11 @@
         md="4"
         xl="3"
       >
-        <article-card :card-title="work.title" />
+        <article-card
+          :card-title="work.title"
+          :card-img="work.img"
+          :card-url="work.url"
+        />
       </v-col>
     </v-row>
   </v-container>

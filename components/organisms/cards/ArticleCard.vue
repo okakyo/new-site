@@ -1,5 +1,5 @@
 <template>
-  <v-card flat>
+  <v-card :href="cardUrl" flat>
     <v-img :src="cardImg" />
     <v-card-title style="text-align: center">
       {{ cardTitle }}
@@ -29,6 +29,11 @@ export default defineComponent({
       type: String,
       required: false,
       default: '/img/noimage.png',
+    },
+    cardUrl: {
+      type: String,
+      required: false,
+      default: null,
     },
   },
 })
