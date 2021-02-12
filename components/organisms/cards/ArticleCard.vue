@@ -1,6 +1,6 @@
 <template>
   <v-card :href="cardUrl" flat>
-    <v-img :src="cardImg" />
+    <v-img :src="cardImg" aspect-ratio="2" />
     <v-card-title style="text-align: center">
       {{ cardTitle }}
     </v-card-title>

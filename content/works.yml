@@ -8,7 +8,7 @@ works:
     url: "/" 
     GitHub: "https://github.com/okakyo/new-site"
   - title: "危険地帯アラート"
-    img: "/img/danger0alert.png"
+    img: "/img/danger-alert.png"
     url: "https://github.com/okakyo/DangerAlert"
   - title: "nomikai-suggest-bot"
     img: "/img/nomikai.png"
