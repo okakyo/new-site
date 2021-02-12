@@ -1,14 +1,16 @@
 works:
   - title: "おしゃべじたぶる"
-    img: ""
-    URL: ""
-    GitHub: ""
+    img: "https://user-images.githubusercontent.com/29503528/98431211-a2c81f80-20f6-11eb-9308-4246c8d84f80.png"
+    URL: "https://github.com/jphacks/F_2002_1"
+    GitHub: "https://github.com/jphacks/F_2002_1"
   - title: "Portfolio Site"
-    img: ""
-    URL: 
-    GitHub: ""
+    img: "/img/ogp.png"
+    URL: "/" 
+    GitHub: "https://github.com/okakyo/new-site"
   - title: "危険地帯アラート"
     img: ""
-    URL: ""
-
+    URL: "https://github.com/okakyo/DangerAlert"
+  - title: "nomikai-suggest-bot"
+    img: "/img/nomikai.png"
+    URL: "https://github.com/silloi/nomikai-suggest-bot"
 
