@@ -1,11 +1,12 @@
 backend:
   name: git-gateway
   branch: main
+  use_large_media_transforms_in_media_library: false 
   accept_roles:
     - admin
 
 media_folder: static/img/post
-public_folder: /img
+public_folder: /img/post
 
 publish_mode: editorial_workflow
 
@@ -20,7 +21,6 @@ collections:
     fields:
       - { label: 'タイトル', name: 'title', widget: 'string' }
       - { label: '公開日', name: 'date', widget: 'datetime' }
-      - { label: 'サムネイル', name: 'thumbnail', widget: 'image', default: "noimage.png" }
       - { label: "タグ", name: "tags", widget: "list"}
       - { label: "限定公開", name: "isOpen", widget: "boolean", default: "false"}
       - { label: '概要', name: 'description', widget: 'string' }

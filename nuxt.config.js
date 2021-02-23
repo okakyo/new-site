@@ -13,7 +13,7 @@ export default {
       prefix: 'og: http://ogp.me/ns#',
     },
     titleTemplate: '%s',
-    title: 'Blog Page',
+    title: "Okakyo's Portfolio Site",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -25,7 +25,7 @@ export default {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: "Okakyo's Blog",
+        content: "Okakyo's Portfolio",
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -37,12 +37,12 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: "Okakyo's Portfolio & Blog Site",
+        content: "Okakyo's Portfolio  Site",
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://okakyo-new-portfolio.netlify.app/img/article/ogp.png',
+        content: 'https://okakyo-new-portfolio.netlify.app/img/ogp.png',
       },
       {
         hid: 'twitter:card',
@@ -83,7 +83,7 @@ export default {
   // Content module configuration (https://go.nuxtjs.dev/content-config)
   content: {
     markdown: {
-      remarkPlugins: ['remark-emoji'],
+      remarkPlugins: ['remark-emoji', '@akebifiky/remark-simple-plantuml'],
       prism: {
         theme: 'prismjs/themes/prism-tomorrow.css',
       },

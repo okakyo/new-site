@@ -5,53 +5,50 @@
       :key="index"
       wrap
       justify="center"
-      class="my-5 text-center"
+      class="my-5"
     >
       <v-col
-        class="my-6"
+        class="ma-6"
         :order="
-          $vuetify.breakpoint.mdAndUp && index % 2 == 0 ? 'first' : 'last'
+          $vuetify.breakpoint.mdAndUp && index % 2 == 1 ? 'last' : 'first'
         "
         cols="6"
         sm="3"
-        md="4"
-        xl="3"
+        md="2"
+        xl="2"
       >
         <v-lazy
           v-model="lazyDescript[index]"
           :options="{
-            threshold: 1.0,
+            threshold: 0.7,
           }"
           transition="slide-x-transition"
         >
-          <v-card outlined>
-            <v-card-title>
-              <h3 class="">Hello World</h3>
-            </v-card-title>
-            <v-card> </v-card>
-          </v-card>
+          <icon-card :card-img="item.img" />
         </v-lazy>
       </v-col>
 
-      <v-col cols="12" sm="7" md="6" xl="4" class="my-6">
-        <v-card outlined>
-          <v-card-title class="headline">
-            {{ item.title }}
-          </v-card-title>
-          <v-card-text>
-            {{ item.description }}
-          </v-card-text>
-        </v-card>
+      <v-col cols="12" sm="7" md="6" xl="6" class="my-6">
+        <description-card
+          :card-description="item.description"
+          :card-title="item.title"
+          :sns-links="item.sns"
+        />
       </v-col>
     </v-row>
   </v-container>
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from '@nuxtjs/composition-api'
+import DescriptionCard from '@/components/organisms/cards/DescriptionCard.vue'
+import IconCard from '@/components/organisms/cards/IconCard.vue'
 
 export default defineComponent({
   name: 'discription',
-  components: {},
+  components: {
+    DescriptionCard,
+    IconCard,
+  },
 
   // 注意：この部分の型のValidator を修正する必要あり
   props: {

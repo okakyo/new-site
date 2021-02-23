@@ -17,10 +17,6 @@
         ><v-icon left>{{ nav.icon }}</v-icon> {{ nav.name }}</v-btn
       >
     </div>
-
-    <v-btn outlined class="ma-1" to="/blog">
-      <v-icon left>mdi-post</v-icon>公式ブログ
-    </v-btn>
   </v-app-bar>
 </template>
 
@@ -38,6 +34,7 @@ export default defineComponent({
   setup() {
     const navList = ref<NavList[]>([
       { name: 'AboutME', to: '/about', icon: 'mdi-account-details' },
+      { name: 'Works', to: '/works', icon: 'mdi-panorama' },
       { name: 'contact', to: '/contact', icon: 'mdi-chat' },
     ])
     return {

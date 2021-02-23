@@ -4,16 +4,17 @@ tags:
   - プログラミング
   - JavaScript
   - Vue.js
-slugs: gridsome-blog  
+slugs: gridsome-blog 
+isOpen: true  
 description: >-
   こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。Netlifyを利用して、無料でサイトを公開、運用する方法を書いて行きたいと思います。 
-thumbnail: /uploads/coffee-2737047_640-min.jpg  
+thumbnail: https://raw.githubusercontent.com/gridsome/gridsome/master/.github/assets/logo.png
 date: 2020-1-19T20:15:41.251Z
 ---
 
 ## Gridsome とは何か
-Gridsome は、Vue.js で利用できる JAMStack フレームワークのひとつです。
-普通の Vue.js とは異なり、GraphQL を利用してブログ記事のデータを管理するため、
+Gridsome は、Vue で利用できる Jamstack フレームワークのひとつです。
+普通の Vue とは異なり、GraphQL を利用してブログ記事のデータを管理するため、
 サーバーサイドの設計を行わずにフロントエンドの実装だけでアプリをできますます。
 
 ## 事前準備
@@ -42,7 +43,7 @@ $ gridsome create new-site
 ## Pug を有効にする
 
 私は、Vue で構築するにあたり、Pug が使えるように設定しています。
-Pug とは、AltHTML の1つの言語で、以下の例のように、インテントによって HTML の要素を入れ子の状態に
+Pug とは、AltHTML の 1 つの言語で、以下の例のように、インテントによって HTML の要素を入れ子の状態に
 してくれるのが特徴です。
 
 例： HTML で実装した場合
@@ -77,8 +78,8 @@ plugins: [
     'gridsome-plugin-pug',
 ]
 ```
-## Vuetify が使えるように設定する
-続いて、Vuetify の設定も行います。Vuetify とは、Vue で利用できるマテリアルデザインコンポーネントフレームワークです。ボタンやテーブルといったコンポーネントがあらかじめ用意されているため、1からデザインの設計をすることなく利用できるのが特徴です。
+## Vuetify を使えるように設定する
+続いて、Vuetify の設定も行います。Vuetify とは、Vue で利用できるマテリアルデザインコンポーネントフレームワークです。ボタンやテーブルといったコンポーネントがあらかじめ用意されているため、1 からデザインの設計をすることなく利用できるのが特徴です。
 
 まず、Vuetify ライブラリと、webpack を編集するライブラリをを npm からインストールします。
 
@@ -391,7 +392,7 @@ plugins: [
 ```
 
 以上で、Gridsome を利用する際、独自に設定しなくてはならないことを書きました。  
-あとは、Vue.js と同じ要領でコンポーネントを設計していきます。
+あとは、Vue と同じ要領でコンポーネントを設計していきます。
 
 
 ## 参考サイト

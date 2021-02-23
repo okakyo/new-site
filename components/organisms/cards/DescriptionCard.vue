@@ -1,12 +1,21 @@
 <template>
-  <v-card :href="cardUrl" flat>
-    <v-img :src="cardImg" aspect-ratio="2" />
+  <v-card outlined>
     <v-card-title style="text-align: center">
       {{ cardTitle }}
     </v-card-title>
-    <v-card-text>
+    <v-card-text class="ml-1">
       {{ cardDescription }}
     </v-card-text>
+    <v-card-actions v-if="snsLinks">
+      <v-btn
+        v-for="(item, index) in snsLinks"
+        :key="index"
+        icon
+        :href="item.url"
+      >
+        <v-icon>{{ item.icon }}</v-icon>
+      </v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 
@@ -25,15 +34,10 @@ export default defineComponent({
       required: false,
       default: '',
     },
-    cardImg: {
-      type: String,
+    snsLinks: {
+      type: Array,
       required: false,
-      default: '/img/noimage.png',
-    },
-    cardUrl: {
-      type: String,
-      required: false,
-      default: null,
+      default: () => {},
     },
   },
 })

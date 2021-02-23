@@ -1,9 +1,7 @@
 <template>
   <index-grid>
-    <index-card nuxt :url-lists="urlLists" page-title="Profile">
-      <template>
-        <activity-window :service-descriptions="serviceDescriptions" />
-      </template>
+    <index-card nuxt :url-lists="urlLists" page-title="Works">
+      <works-window :works="works.works" />
     </index-card>
   </index-grid>
 </template>
@@ -12,19 +10,18 @@
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 import IndexGrid from '@/components/molecules/grids/IndexGrid.vue'
 import IndexCard from '@/components/organisms/cards/IndexCard.vue'
-import ActivityWindow from '@/components/templates/about/ActivityWindow.vue'
-
+import WorksWindow from '@/components/templates/works/WorksWindow.vue'
 export default defineComponent({
   name: 'IntroductionPages',
   components: {
     IndexGrid,
     IndexCard,
-    ActivityWindow,
+    WorksWindow,
   },
   async asyncData({ $content }) {
-    const serviceDescriptions = await $content('index').sortBy('path').fetch()
+    const works = await $content('works').sortBy('path').fetch()
     return {
-      serviceDescriptions,
+      works,
     }
   },
   setup() {
@@ -35,8 +32,8 @@ export default defineComponent({
         disabled: false,
       },
       {
-        text: 'About',
-        href: '/about',
+        text: 'works',
+        href: '/works',
         disabled: true,
       },
     ])

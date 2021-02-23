@@ -4,9 +4,10 @@ tags:
   - 初心者向け 
   - Webアプリ開発 
 slugs: web-app-starter 
+isOpen: true  
 description: >-
   こんにちは、おかきょーです。今回は、今からWeb アプリを始めたいと考えている学生へ向けて、個人的に効率よくWeb アプリ開発を学ぶ方法について書いて行きたいと考えてこの記事を書きました。
-thumbnail: /uploads/code-1839406_640-min.jpg 
+thumbnail: https://user-images.githubusercontent.com/29594820/99104055-cd990300-2623-11eb-9891-3081271c5655.png
 date: 2020-1-21T04:52:54.681Z
 ---
 
